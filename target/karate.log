@@ -1,0 +1,418 @@
+08:50:26.143 [main] DEBUG com.intuit.karate.Suite - [config] classpath:karate-config.js
+08:50:28.121 [main] INFO  com.intuit.karate - karate.env system property was: null 
+08:50:28.669 [main] DEBUG com.intuit.karate - request:
+1 > POST https://dev-core-service.innova.com/api/dlc-locations
+1 > Content-Type: application/json; charset=UTF-8
+1 > Accept: application/json
+1 > api-key: EJPLzfSyCmdDSUzhG9LJwt3MCgTrAN
+1 > Content-Length: 28
+1 > Host: dev-core-service.innova.com
+1 > Connection: Keep-Alive
+1 > User-Agent: Apache-HttpClient/4.5.14 (Java/21.0.3)
+1 > Accept-Encoding: gzip,deflate
+{"Language":null,"Vin":null}
+
+08:50:31.595 [main] DEBUG com.intuit.karate - response time in milliseconds: 2921
+1 < 400
+1 < Transfer-Encoding: chunked
+1 < Content-Type: application/json; charset=utf-8
+1 < Server: Microsoft-IIS/10.0
+1 < X-Powered-By: ASP.NET
+1 < Date: Tue, 30 Sep 2025 08:50:31 GMT
+{"TraceId":"306552beeea8676d57f81407f5fcbebb","Ok":false,"Message":"Invalid data provided","Data":[{"Field":"Vin","Error":"The Vin field is required."},{"Field":"Language","Error":"The Language field is required."}]}
+
+08:50:31.626 [main] INFO  com.intuit.karate - [print] Data:  [
+  {
+    "Field": "Vin",
+    "Error": "The Vin field is required."
+  },
+  {
+    "Field": "Language",
+    "Error": "The Language field is required."
+  }
+]
+ 
+08:50:31.663 [main] INFO  com.intuit.karate - karate.env system property was: null 
+08:50:31.680 [main] DEBUG com.intuit.karate - request:
+1 > POST https://dev-core-service.innova.com/api/dlc-locations
+1 > Content-Type: application/json; charset=UTF-8
+1 > Accept: application/json
+1 > api-key: EJPLzfSyCmdDSUzhG9LJwt3MCgTrAN
+1 > Content-Length: 43
+1 > Host: dev-core-service.innova.com
+1 > Connection: Keep-Alive
+1 > User-Agent: Apache-HttpClient/4.5.14 (Java/21.0.3)
+1 > Accept-Encoding: gzip,deflate
+{"Language":null,"Vin":"JM1DRACB*N1******"}
+
+08:50:32.429 [main] DEBUG com.intuit.karate - response time in milliseconds: 747
+1 < 400
+1 < Transfer-Encoding: chunked
+1 < Content-Type: application/json; charset=utf-8
+1 < Server: Microsoft-IIS/10.0
+1 < X-Powered-By: ASP.NET
+1 < Date: Tue, 30 Sep 2025 08:50:31 GMT
+{"TraceId":"4a161b2a234362871c6d7851d05a0dbb","Ok":false,"Message":"Invalid data provided","Data":[{"Field":"Language","Error":"The Language field is required."}]}
+
+08:50:32.435 [main] INFO  com.intuit.karate - [print] Data:  [
+  {
+    "Field": "Language",
+    "Error": "The Language field is required."
+  }
+]
+ 
+08:50:32.459 [main] INFO  com.intuit.karate - karate.env system property was: null 
+08:50:32.468 [main] DEBUG com.intuit.karate - request:
+1 > POST https://dev-core-service.innova.com/api/dlc-locations
+1 > Content-Type: application/json; charset=UTF-8
+1 > Accept: application/json
+1 > api-key: EJPLzfSyCmdDSUzhG9LJwt3MCgTrAN
+1 > Content-Length: 31
+1 > Host: dev-core-service.innova.com
+1 > Connection: Keep-Alive
+1 > User-Agent: Apache-HttpClient/4.5.14 (Java/21.0.3)
+1 > Accept-Encoding: gzip,deflate
+{"Language":"en-us","Vin":null}
+
+08:50:33.307 [main] DEBUG com.intuit.karate - response time in milliseconds: 838
+1 < 400
+1 < Transfer-Encoding: chunked
+1 < Content-Type: application/json; charset=utf-8
+1 < Server: Microsoft-IIS/10.0
+1 < X-Powered-By: ASP.NET
+1 < Date: Tue, 30 Sep 2025 08:50:32 GMT
+{"TraceId":"21c386106954917486a81f5a0ae7861e","Ok":false,"Message":"Invalid data provided","Data":[{"Field":"Vin","Error":"The Vin field is required."}]}
+
+08:50:33.309 [main] INFO  com.intuit.karate - [print] Data:  [
+  {
+    "Field": "Vin",
+    "Error": "The Vin field is required."
+  }
+]
+ 
+08:50:33.329 [main] INFO  com.intuit.karate - karate.env system property was: null 
+08:50:33.336 [main] DEBUG com.intuit.karate - request:
+1 > POST https://dev-core-service.innova.com/api/dlc-locations
+1 > Content-Type: application/json; charset=UTF-8
+1 > Accept: application/json
+1 > api-key: EJPLzfSyCmdDSUzhG9LJwt3MCgTrAN
+1 > Content-Length: 48
+1 > Host: dev-core-service.innova.com
+1 > Connection: Keep-Alive
+1 > User-Agent: Apache-HttpClient/4.5.14 (Java/21.0.3)
+1 > Accept-Encoding: gzip,deflate
+{"Language":"en-us","Vin":"JM1DRACB*N1******__"}
+
+08:50:34.161 [main] DEBUG com.intuit.karate - response time in milliseconds: 824
+1 < 200
+1 < Transfer-Encoding: chunked
+1 < Content-Type: application/json; charset=utf-8
+1 < Server: Microsoft-IIS/10.0
+1 < X-Powered-By: ASP.NET
+1 < Date: Tue, 30 Sep 2025 08:50:34 GMT
+{"TraceId":"699e72799b15551a85a31fae1a71d5a0","Ok":false,"Message":"The VIN supplied is invalid. The following VINs were tried and failed: JM1DRACB*N1******__","Data":null}
+
+08:50:34.169 [main] INFO  com.intuit.karate - [print] Data:  null 
+08:50:34.199 [main] INFO  com.intuit.karate - karate.env system property was: null 
+08:50:34.216 [main] DEBUG com.intuit.karate - request:
+1 > POST https://dev-core-service.innova.com/api/dlc-locations
+1 > Content-Type: application/json; charset=UTF-8
+1 > Accept: application/json
+1 > api-key: abc123
+1 > Content-Length: 46
+1 > Host: dev-core-service.innova.com
+1 > Connection: Keep-Alive
+1 > User-Agent: Apache-HttpClient/4.5.14 (Java/21.0.3)
+1 > Accept-Encoding: gzip,deflate
+{"Language":"en-us","Vin":"JM1DRACB*N1******"}
+
+08:50:35.031 [main] DEBUG com.intuit.karate - response time in milliseconds: 812
+1 < 401
+1 < Transfer-Encoding: chunked
+1 < Content-Type: application/json
+1 < Server: Microsoft-IIS/10.0
+1 < X-Powered-By: ASP.NET
+1 < Date: Tue, 30 Sep 2025 08:50:34 GMT
+{"TraceId":"34c9c8602b076dd0920db43bc8b31c10","Ok":false,"Message":"Invalid Api Key","Data":null}
+
+08:50:35.037 [main] INFO  com.intuit.karate - [print] Data:  null 
+08:50:35.050 [main] INFO  com.intuit.karate - karate.env system property was: null 
+08:50:35.056 [main] DEBUG com.intuit.karate - request:
+1 > POST https://dev-core-service.innova.com/api/dlc-locations
+1 > Content-Type: application/json; charset=UTF-8
+1 > Accept: application/json
+1 > api-key: EJPLzfSyCmdDSUzhG9LJwt3MCgTrAN
+1 > Content-Length: 46
+1 > Host: dev-core-service.innova.com
+1 > Connection: Keep-Alive
+1 > User-Agent: Apache-HttpClient/4.5.14 (Java/21.0.3)
+1 > Accept-Encoding: gzip,deflate
+{"Language":"en-us","Vin":"JM1DRACB*N1******"}
+
+08:50:35.901 [main] DEBUG com.intuit.karate - response time in milliseconds: 843
+1 < 200
+1 < Transfer-Encoding: chunked
+1 < Content-Type: application/json; charset=utf-8
+1 < Server: Microsoft-IIS/10.0
+1 < X-Powered-By: ASP.NET
+1 < Date: Tue, 30 Sep 2025 08:50:35 GMT
+{"TraceId":"6d58c9d139806e9d7b4aeaf1b8d6eb12","Ok":true,"Message":null,"Data":[{"Year":"2022","Make":"MAZDA","Model":"MX-30","LocationNumber":2,"Access":"uncovered","Comments":"Driver Side - Under Lower Left Side of Dashboard","ImageFileName":"","ImageFileUrl":"https://secure-downloads.innova.com/dlc-location-images-wm/?Expires=1759222535&Signature=AlYBSFeL~7lCiiWijjhwfw9rZKCHCde5-J3BxTDhdjozRCz3WtO4-KyEe9vHFGlRGepm2XdpIRRSWP8OS0NxPi6BmxCntKmDYfxMGLQckDA1XG8sjWo4LvVtOq18ND3WWDUhcJFDB461R6Bj3ijf9jldCf7ooFwN-cKLhc87J1DPG34KnJYSNYhlh-w-nLpy4FKo99GXlwYMKXReiYxVBeDAA6sP1ab5ImGN9VfYgFbzMbiIMxn8GtuZ5u97eqlz4t4DRsYpzmv3haGdyRe3GxGQWEci~cnhSQqkpuUTjNwmIAuFtQIptbw0sU1lnN2mzZHkXxp9xYl6gOFQrUfceQ__&Key-Pair-Id=APKAJVI4C2YLKAQ7KO6A","ImageFileUrlSmall":"https://secure-downloads.innova.com/dlc-location-images-wm/?Expires=1759222535&Signature=AlYBSFeL~7lCiiWijjhwfw9rZKCHCde5-J3BxTDhdjozRCz3WtO4-KyEe9vHFGlRGepm2XdpIRRSWP8OS0NxPi6BmxCntKmDYfxMGLQckDA1XG8sjWo4LvVtOq18ND3WWDUhcJFDB461R6Bj3ijf9jldCf7ooFwN-cKLhc87J1DPG34KnJYSNYhlh-w-nLpy4FKo99GXlwYMKXReiYxVBeDAA6sP1ab5ImGN9VfYgFbzMbiIMxn8GtuZ5u97eqlz4t4DRsYpzmv3haGdyRe3GxGQWEci~cnhSQqkpuUTjNwmIAuFtQIptbw0sU1lnN2mzZHkXxp9xYl6gOFQrUfceQ__&Key-Pair-Id=APKAJVI4C2YLKAQ7KO6A"}]}
+
+08:50:35.933 [main] ERROR com.intuit.karate - classpath:resources/apis/dlc-locations/dlc-locations-by-vin.feature:46
+And match response.Data[0].ImageFileUrl == '#? _ == null || _ == ""'
+match failed: EQUALS
+  $ | evaluated to 'false' (STRING:STRING)
+  'https://secure-downloads.innova.com/dlc-location-images-wm/?Expires=1759222535&Signature=AlYBSFeL~7lCiiWijjhwfw9rZKCHCde5-J3BxTDhdjozRCz3WtO4-KyEe9vHFGlRGepm2XdpIRRSWP8OS0NxPi6BmxCntKmDYfxMGLQckDA1XG8sjWo4LvVtOq18ND3WWDUhcJFDB461R6Bj3ijf9jldCf7ooFwN-cKLhc87J1DPG34KnJYSNYhlh-w-nLpy4FKo99GXlwYMKXReiYxVBeDAA6sP1ab5ImGN9VfYgFbzMbiIMxn8GtuZ5u97eqlz4t4DRsYpzmv3haGdyRe3GxGQWEci~cnhSQqkpuUTjNwmIAuFtQIptbw0sU1lnN2mzZHkXxp9xYl6gOFQrUfceQ__&Key-Pair-Id=APKAJVI4C2YLKAQ7KO6A'
+  '#? _ == null || _ == ""'
+
+classpath:resources/apis/dlc-locations/dlc-locations-by-vin.feature:46
+08:50:35.964 [main] INFO  com.intuit.karate - karate.env system property was: null 
+08:50:35.970 [main] DEBUG com.intuit.karate - request:
+1 > POST https://dev-core-service.innova.com/api/dlc-locations
+1 > Content-Type: application/json; charset=UTF-8
+1 > Accept: application/json
+1 > api-key: EJPLzfSyCmdDSUzhG9LJwt3MCgTrAN
+1 > Content-Length: 46
+1 > Host: dev-core-service.innova.com
+1 > Connection: Keep-Alive
+1 > User-Agent: Apache-HttpClient/4.5.14 (Java/21.0.3)
+1 > Accept-Encoding: gzip,deflate
+{"Language":"en-us","Vin":"4T4BF1FK1FR513668"}
+
+08:50:36.722 [main] DEBUG com.intuit.karate - response time in milliseconds: 750
+1 < 200
+1 < Transfer-Encoding: chunked
+1 < Content-Type: application/json; charset=utf-8
+1 < Server: Microsoft-IIS/10.0
+1 < X-Powered-By: ASP.NET
+1 < Date: Tue, 30 Sep 2025 08:50:35 GMT
+{"TraceId":"dfe8a77e0d0e01d147c05592c43e5c99","Ok":true,"Message":null,"Data":[{"Year":"2015","Make":"Toyota","Model":"Camry","LocationNumber":2,"Access":"uncovered ","Comments":"Driver Side - Under Lower Left Side of Dashboard","ImageFileName":"camry-5\tC","ImageFileUrl":"https://secure-downloads.innova.com/dlc-location-images-wm/toyota/camry/camry-5\tc.jpg?Expires=1759222536&Signature=nluiPYNyiYwFpcJUGSIXCNObgqgPYPf1HTJbJjgrX~V34xoSbLEmA0MpOegy-q2tc7j-~~BvnWLpOh3h5Yq4tCENtag-HQIPqTSddL2uQm0WJl~N-SMY1iG8GdH4g3SQCcU~Uuy6ZzGamlkWgeUdzoZa7xQ5ZtlHVntLmQzhCKPwuD3Kl2pDuqh0kV~Vdb1XpUdCXSdUBlDoGR1G-N3SSajI26owvqqN3fuKWjjHI3-ez~RC0t9H7YW4FpzYjw9QBudZ1AqabHsJAn3B3u-hSJjmMPzxA1hy-2SuW2E3n~xw2X9AgFpJNVOhMUzrkpy2l6UBwSvppIhUccgUbpahdA__&Key-Pair-Id=APKAJVI4C2YLKAQ7KO6A","ImageFileUrlSmall":"https://secure-downloads.innova.com/dlc-location-images-wm/toyota/camry/camry-5\tc-sm.jpg?Expires=1759222536&Signature=rsvKioJrGbavIbtm4FscQGvhX6R0PeQtST5zOhbLK5un5qjnRayL4fxt042Kj8PaVTiuNXTjZ8xV7pnxchqh14jRsMn01ODruxBn53B3m0RZqSOc4k1QEdAmuy8GdHX7kpa-~kSsWm-wVHlbAm1a-0jUQPrOroPC35DF0ngO9O7Ukd4fyL-EJkm-viAQC95PYdC8y-dTwBlrOxzd3rDi2qzeZaoWKfrxjacEqkoQ~FISBZD6mfyWLC26Q3w-fUxMVKAufA3OoZv7xvJJDfD74cyYt6vE-qpi3eVrOrnJVEnjufX3bnlupuMVTUckIMY4HvZd6H4AzKyDPGd37Rmp3Q__&Key-Pair-Id=APKAJVI4C2YLKAQ7KO6A"}]}
+
+08:50:36.756 [main] INFO  com.intuit.karate - karate.env system property was: null 
+08:50:36.762 [main] DEBUG com.intuit.karate - request:
+1 > POST https://dev-core-service.innova.com/api/dlc-locations
+1 > Content-Type: application/json; charset=UTF-8
+1 > Accept: application/json
+1 > api-key: EJPLzfSyCmdDSUzhG9LJwt3MCgTrAN
+1 > Content-Length: 46
+1 > Host: dev-core-service.innova.com
+1 > Connection: Keep-Alive
+1 > User-Agent: Apache-HttpClient/4.5.14 (Java/21.0.3)
+1 > Accept-Encoding: gzip,deflate
+{"Language":"en-us","Vin":"2CNDL73F976028975"}
+
+08:50:37.502 [main] DEBUG com.intuit.karate - response time in milliseconds: 739
+1 < 200
+1 < Transfer-Encoding: chunked
+1 < Content-Type: application/json; charset=utf-8
+1 < Server: Microsoft-IIS/10.0
+1 < X-Powered-By: ASP.NET
+1 < Date: Tue, 30 Sep 2025 08:50:37 GMT
+{"TraceId":"ebcaaa7090f0e0064fc3b182c1ee859e","Ok":true,"Message":null,"Data":[{"Year":"2007","Make":"Chevrolet","Model":"Equinox","LocationNumber":2,"Access":"uncovered ","Comments":"Driver Side - Under Lower Left Side of Dashboard","ImageFileName":"equinox-1","ImageFileUrl":"https://secure-downloads.innova.com/dlc-location-images-wm/chevrolet/equinox/equinox-1.jpg?Expires=1759222537&Signature=NEbtSuqMwwbGfZyFGQFwY1uZ4KzzRj9iTEyHt8IuauOZpxGO3agWUQJB-cVo~HGLdWDTzRPZGea0u1zhAMEG7mlbAz0nTXk2KBFYwWL~dPCUYyFp6t84904XpRtXOCqENWn8Gr6lu9Xc-50gK-sxDT72ArImqZZywn4ygIcmf57fun4lMOQb5nA--GqbFxJWR9pMtf1LswagJLWquabGhXG-v~YXwOAGfmTZfc6olL~XK1inSQkDo4SuXbSFYJvB4KqBwZMA7eLiECODLMVnPeZ4CobwRxfbv9pRiewzGhOix2NTQr894RXWRMeC0~DPJdF0CUoAfcTLisWrwAp8sw__&Key-Pair-Id=APKAJVI4C2YLKAQ7KO6A","ImageFileUrlSmall":"https://secure-downloads.innova.com/dlc-location-images-wm/chevrolet/equinox/equinox-1-sm.jpg?Expires=1759222537&Signature=YH-CxQXH2TCbqIMHzWXe5LcDQ0iMcj6ziVhHmB0WQFs~6nsBrED2-5n2TecjMAkWZ7grq4eZt2uZVoIYWJD0txQg4YewyDRRN35NYbnkKt6WfLgPHhgrvCBc5gLO~FYvpv80R6ZPs0UcPDFHR4vb2nIU1EQa2QRTJuhG9nh5M39FSIIVORkr70LH0Tw77la6ZIFry~YohPqxFrCHayZT2zVhtZb1x9X4zIbS5Wo-63YOlMHvuEi5~Sp7kPN0VqzGBrg2dSC10q-8nH2te-Lnt5VZ2K~lPyrcepN489pdG8AkUhb~rFTzEZykHHE6yxL-B8Qcg7cPQV7NVBVr5PiI2A__&Key-Pair-Id=APKAJVI4C2YLKAQ7KO6A"}]}
+
+08:50:37.526 [main] INFO  com.intuit.karate - karate.env system property was: null 
+08:50:37.529 [main] DEBUG com.intuit.karate - request:
+1 > POST https://dev-core-service.innova.com/api/dlc-locations
+1 > Content-Type: application/json; charset=UTF-8
+1 > Accept: application/json
+1 > api-key: EJPLzfSyCmdDSUzhG9LJwt3MCgTrAN
+1 > Content-Length: 46
+1 > Host: dev-core-service.innova.com
+1 > Connection: Keep-Alive
+1 > User-Agent: Apache-HttpClient/4.5.14 (Java/21.0.3)
+1 > Accept-Encoding: gzip,deflate
+{"Language":"es-mx","Vin":"JM1DRACB*N1******"}
+
+08:50:38.320 [main] DEBUG com.intuit.karate - response time in milliseconds: 791
+1 < 200
+1 < Transfer-Encoding: chunked
+1 < Content-Type: application/json; charset=utf-8
+1 < Server: Microsoft-IIS/10.0
+1 < X-Powered-By: ASP.NET
+1 < Date: Tue, 30 Sep 2025 08:50:37 GMT
+{"TraceId":"7ff26c5e6fb86ab1d06c0c21bcb0cb94","Ok":true,"Message":null,"Data":[{"Year":"2022","Make":"MAZDA","Model":"MX-30","LocationNumber":2,"Access":"descubierto","Comments":"Del lado del conductor - En la parte inferior izquierda del panel","ImageFileName":"","ImageFileUrl":"https://secure-downloads.innova.com/dlc-location-images-wm/?Expires=1759222538&Signature=eWjBhqPmRiBPldqcNWMASYdaXE-HwxT2Nl~PHYTq4aywbNDBlRfLyMeelQfLG-gwbI-e6ZpXCKjURPloUgijNoIcInnBsHkc5o9GcJdPC2oI6WediAChu7bNPc7FlnRNhjbOR73Zsxuvdy2~VC6q2m9arnj7uJET4LNhAkgOXU0u-BxOthB8E926k21Wz6nLwLjx1OhRHr5d9Y2mrWJ5-A5FaqdbXXBqY2S7ftMvcfFFd9eK3vzda0HTNeQ6Fw1eJPNPNvUdHRPrk0W3YCLalZscv8dncu9t2kvABM8930oSItisdB~lHTRq5ATX3INeZnKS6IusZv6TvVBlFR8egg__&Key-Pair-Id=APKAJVI4C2YLKAQ7KO6A","ImageFileUrlSmall":"https://secure-downloads.innova.com/dlc-location-images-wm/?Expires=1759222538&Signature=eWjBhqPmRiBPldqcNWMASYdaXE-HwxT2Nl~PHYTq4aywbNDBlRfLyMeelQfLG-gwbI-e6ZpXCKjURPloUgijNoIcInnBsHkc5o9GcJdPC2oI6WediAChu7bNPc7FlnRNhjbOR73Zsxuvdy2~VC6q2m9arnj7uJET4LNhAkgOXU0u-BxOthB8E926k21Wz6nLwLjx1OhRHr5d9Y2mrWJ5-A5FaqdbXXBqY2S7ftMvcfFFd9eK3vzda0HTNeQ6Fw1eJPNPNvUdHRPrk0W3YCLalZscv8dncu9t2kvABM8930oSItisdB~lHTRq5ATX3INeZnKS6IusZv6TvVBlFR8egg__&Key-Pair-Id=APKAJVI4C2YLKAQ7KO6A"}]}
+
+08:50:38.327 [main] ERROR com.intuit.karate - classpath:resources/apis/dlc-locations/dlc-locations-by-vin.feature:109
+And match response.Data[0].ImageFileUrl == '#? _ == null || _ == ""'
+match failed: EQUALS
+  $ | evaluated to 'false' (STRING:STRING)
+  'https://secure-downloads.innova.com/dlc-location-images-wm/?Expires=1759222538&Signature=eWjBhqPmRiBPldqcNWMASYdaXE-HwxT2Nl~PHYTq4aywbNDBlRfLyMeelQfLG-gwbI-e6ZpXCKjURPloUgijNoIcInnBsHkc5o9GcJdPC2oI6WediAChu7bNPc7FlnRNhjbOR73Zsxuvdy2~VC6q2m9arnj7uJET4LNhAkgOXU0u-BxOthB8E926k21Wz6nLwLjx1OhRHr5d9Y2mrWJ5-A5FaqdbXXBqY2S7ftMvcfFFd9eK3vzda0HTNeQ6Fw1eJPNPNvUdHRPrk0W3YCLalZscv8dncu9t2kvABM8930oSItisdB~lHTRq5ATX3INeZnKS6IusZv6TvVBlFR8egg__&Key-Pair-Id=APKAJVI4C2YLKAQ7KO6A'
+  '#? _ == null || _ == ""'
+
+classpath:resources/apis/dlc-locations/dlc-locations-by-vin.feature:109
+08:50:39.442 [main] INFO  com.intuit.karate - karate.env system property was: null 
+08:50:39.458 [main] DEBUG com.intuit.karate - request:
+1 > POST https://dev-core-service.innova.com/api/dlc-locations/available-makes-by-years
+1 > Content-Type: application/json; charset=UTF-8
+1 > Accept: application/json
+1 > api-key: EJPLzfSyCmdDSUzhG9LJwt3MCgTrAN
+1 > Content-Length: 21
+1 > Host: dev-core-service.innova.com
+1 > Connection: Keep-Alive
+1 > User-Agent: Apache-HttpClient/4.5.14 (Java/21.0.3)
+1 > Accept-Encoding: gzip,deflate
+{"Years":[2009,2015]}
+
+08:50:40.215 [main] DEBUG com.intuit.karate - response time in milliseconds: 757
+1 < 200
+1 < Transfer-Encoding: chunked
+1 < Content-Type: application/json; charset=utf-8
+1 < Server: Microsoft-IIS/10.0
+1 < X-Powered-By: ASP.NET
+1 < Date: Tue, 30 Sep 2025 08:50:40 GMT
+{"TraceId":"7cdae1463404472d13b5bcb5bdd3827d","Ok":true,"Message":null,"Data":["Acura","Audi","BMW","Buick","Cadillac","Chevrolet","Chrysler","Dodge","Fiat","Ford","Freightliner","GMC","Honda","HUMMER","Hyundai","Infiniti","Jaguar","Jeep","Kia","Land Rover","Lexus","Lincoln","Lotus","Maserati","Maybach","Mazda","Mercedes-Benz","Mercury","MINI","Mitsubishi","Nissan","Pontiac","Porsche","Ram","Rolls-Royce","Saab","Saturn","Scion","Smart","Subaru","Suzuki","Tesla","Toyota","Volkswagen","Volvo"]}
+
+08:50:40.228 [main] INFO  com.intuit.karate - karate.env system property was: null 
+08:50:40.234 [main] DEBUG com.intuit.karate - request:
+1 > POST https://dev-core-service.innova.com/api/dlc-locations/available-makes-by-years
+1 > Content-Type: application/json; charset=UTF-8
+1 > Accept: application/json
+1 > api-key: EJPLzfSyCmdDSUzhG9LJwt3MCgTrAN
+1 > Content-Length: 16
+1 > Host: dev-core-service.innova.com
+1 > Connection: Keep-Alive
+1 > User-Agent: Apache-HttpClient/4.5.14 (Java/21.0.3)
+1 > Accept-Encoding: gzip,deflate
+{"Years":[1995]}
+
+08:50:40.986 [main] DEBUG com.intuit.karate - response time in milliseconds: 752
+1 < 200
+1 < Transfer-Encoding: chunked
+1 < Content-Type: application/json; charset=utf-8
+1 < Server: Microsoft-IIS/10.0
+1 < X-Powered-By: ASP.NET
+1 < Date: Tue, 30 Sep 2025 08:50:40 GMT
+{"TraceId":"7ba95e839df53ed6a99d3caccee0ef72","Ok":true,"Message":null,"Data":["Ford","Jaguar"]}
+
+08:50:40.996 [main] INFO  com.intuit.karate - karate.env system property was: null 
+08:50:41.001 [main] DEBUG com.intuit.karate - request:
+1 > POST https://dev-core-service.innova.com/api/dlc-locations/available-makes-by-years
+1 > Content-Type: application/json; charset=UTF-8
+1 > Accept: application/json
+1 > api-key: EJPLzfSyCmdDSUzhG9LJwt3MCgTrAN
+1 > Content-Length: 16
+1 > Host: dev-core-service.innova.com
+1 > Connection: Keep-Alive
+1 > User-Agent: Apache-HttpClient/4.5.14 (Java/21.0.3)
+1 > Accept-Encoding: gzip,deflate
+{"Years":[2025]}
+
+08:50:41.789 [main] DEBUG com.intuit.karate - response time in milliseconds: 787
+1 < 200
+1 < Transfer-Encoding: chunked
+1 < Content-Type: application/json; charset=utf-8
+1 < Server: Microsoft-IIS/10.0
+1 < X-Powered-By: ASP.NET
+1 < Date: Tue, 30 Sep 2025 08:50:41 GMT
+{"TraceId":"ed37342ccde8212af45802db007466fe","Ok":true,"Message":null,"Data":[]}
+
+08:50:41.943 [main] INFO  com.intuit.karate - karate.env system property was: null 
+08:50:41.952 [main] DEBUG com.intuit.karate - request:
+1 > POST https://dev-core-service.innova.com/api/dlc-locations/available-years-by-makes
+1 > Content-Type: application/json; charset=UTF-8
+1 > Accept: application/json
+1 > api-key: EJPLzfSyCmdDSUzhG9LJwt3MCgTrAN
+1 > Content-Length: 32
+1 > Host: dev-core-service.innova.com
+1 > Connection: Keep-Alive
+1 > User-Agent: Apache-HttpClient/4.5.14 (Java/21.0.3)
+1 > Accept-Encoding: gzip,deflate
+{"Makes":["Sprinter","Ferrari"]}
+
+08:50:42.698 [main] DEBUG com.intuit.karate - response time in milliseconds: 745
+1 < 200
+1 < Transfer-Encoding: chunked
+1 < Content-Type: application/json; charset=utf-8
+1 < Server: Microsoft-IIS/10.0
+1 < X-Powered-By: ASP.NET
+1 < Date: Tue, 30 Sep 2025 08:50:41 GMT
+{"TraceId":"761d523b4cfb9fa943baa5620cb59953","Ok":true,"Message":null,"Data":[2021,2014,2005,2004,2003]}
+
+08:50:42.712 [main] INFO  com.intuit.karate - karate.env system property was: null 
+08:50:42.718 [main] DEBUG com.intuit.karate - request:
+1 > POST https://dev-core-service.innova.com/api/dlc-locations/available-years-by-makes
+1 > Content-Type: application/json; charset=UTF-8
+1 > Accept: application/json
+1 > api-key: EJPLzfSyCmdDSUzhG9LJwt3MCgTrAN
+1 > Content-Length: 18
+1 > Host: dev-core-service.innova.com
+1 > Connection: Keep-Alive
+1 > User-Agent: Apache-HttpClient/4.5.14 (Java/21.0.3)
+1 > Accept-Encoding: gzip,deflate
+{"Makes":["Ford"]}
+
+08:50:43.555 [main] DEBUG com.intuit.karate - response time in milliseconds: 836
+1 < 200
+1 < Transfer-Encoding: chunked
+1 < Content-Type: application/json; charset=utf-8
+1 < Server: Microsoft-IIS/10.0
+1 < X-Powered-By: ASP.NET
+1 < Date: Tue, 30 Sep 2025 08:50:43 GMT
+{"TraceId":"abc00b25010b0434e6b79bd609e0254c","Ok":true,"Message":null,"Data":[2023,2022,2021,2020,2019,2018,2017,2016,2015,2014,2013,2012,2011,2010,2009,2008,2007,2006,2005,2004,2003,2002,2001,2000,1999,1998,1997,1996,1995]}
+
+08:50:43.631 [main] INFO  com.intuit.karate - karate.env system property was: null 
+08:50:43.643 [main] DEBUG com.intuit.karate - request:
+1 > POST https://dev-core-service.innova.com/api/dlc-locations/available-models-by-makes-and-years
+1 > Content-Type: application/json; charset=UTF-8
+1 > Accept: application/json
+1 > api-key: EJPLzfSyCmdDSUzhG9LJwt3MCgTrAN
+1 > Content-Length: 46
+1 > Host: dev-core-service.innova.com
+1 > Connection: Keep-Alive
+1 > User-Agent: Apache-HttpClient/4.5.14 (Java/21.0.3)
+1 > Accept-Encoding: gzip,deflate
+{"Makes":["Ferrari"],"Years":[2021,2014,2001]}
+
+08:50:44.368 [main] DEBUG com.intuit.karate - response time in milliseconds: 725
+1 < 200
+1 < Transfer-Encoding: chunked
+1 < Content-Type: application/json; charset=utf-8
+1 < Server: Microsoft-IIS/10.0
+1 < X-Powered-By: ASP.NET
+1 < Date: Tue, 30 Sep 2025 08:50:43 GMT
+{"TraceId":"0f0824fa5954769595ec2cf10ea537f9","Ok":true,"Message":null,"Data":["FF","SF 90 stradale"]}
+
+08:50:44.379 [main] INFO  com.intuit.karate - karate.env system property was: null 
+08:50:44.383 [main] DEBUG com.intuit.karate - request:
+1 > POST https://dev-core-service.innova.com/api/dlc-locations/available-models-by-makes-and-years
+1 > Content-Type: application/json; charset=UTF-8
+1 > Accept: application/json
+1 > api-key: EJPLzfSyCmdDSUzhG9LJwt3MCgTrAN
+1 > Content-Length: 47
+1 > Host: dev-core-service.innova.com
+1 > Connection: Keep-Alive
+1 > User-Agent: Apache-HttpClient/4.5.14 (Java/21.0.3)
+1 > Accept-Encoding: gzip,deflate
+{"Makes":["Plymouth"],"Years":[2021,2014,2001]}
+
+08:50:45.115 [main] DEBUG com.intuit.karate - response time in milliseconds: 731
+1 < 200
+1 < Transfer-Encoding: chunked
+1 < Content-Type: application/json; charset=utf-8
+1 < Server: Microsoft-IIS/10.0
+1 < X-Powered-By: ASP.NET
+1 < Date: Tue, 30 Sep 2025 08:50:44 GMT
+{"TraceId":"af9d75dc004fed3d8427b32daa491847","Ok":true,"Message":null,"Data":["Neon","Prowler"]}
+
+08:50:45.183 [main] INFO  com.intuit.karate - karate.env system property was: null 
+08:50:45.185 [main] DEBUG com.intuit.karate - request:
+1 > POST https://dev-core-service.innova.com/api/dlc-locations/get-infos-by-year-make-model
+1 > Content-Type: application/json; charset=UTF-8
+1 > Accept: application/json
+1 > api-key: EJPLzfSyCmdDSUzhG9LJwt3MCgTrAN
+1 > Content-Length: 61
+1 > Host: dev-core-service.innova.com
+1 > Connection: Keep-Alive
+1 > User-Agent: Apache-HttpClient/4.5.14 (Java/21.0.3)
+1 > Accept-Encoding: gzip,deflate
+{"Language":"en-us","Year":2020,"Make":"Acura","Model":"ILX"}
+
+08:50:45.916 [main] DEBUG com.intuit.karate - response time in milliseconds: 729
+1 < 200
+1 < Transfer-Encoding: chunked
+1 < Content-Type: application/json; charset=utf-8
+1 < Server: Microsoft-IIS/10.0
+1 < X-Powered-By: ASP.NET
+1 < Date: Tue, 30 Sep 2025 08:50:45 GMT
+{"TraceId":"7668686926452e1cf7a50f3fc42e1362","Ok":true,"Message":null,"Data":[{"Year":"2020","Make":"Acura","Model":"ILX","LocationNumber":2,"Access":"uncovered ","Comments":"Driver Side - Under Lower Left Side of Dashboard","ImageFileName":"ilx-1","ImageFileUrl":"https://secure-downloads.innova.com/dlc-location-images-wm/acura/ilx/ilx-1.jpg?Expires=1759222545&Signature=LYAbvypmTpm~ker65wnJZIuD4RfM0RT0GlYUNd963~O9TRWWRxbHQkFxRnp~H2tWQFPtS812OJnatbUtc1qfhXJdRZAHn35~d25WRQxMMMhVw1ocZqgKdNqvq05rFFqdwWDVO5~oMh~w-ZTo14nnTX9xW~SmefiFvWud-rw~w0cFmmPXOFjJd3r-HCbOLNJf-HEs5HvSRv0wW~AbFXw7fn0bDAMh1FRPVXkdfMa3Xm3gsU2voYkRWbQhWw0GeOIxa9FfmKq7lMtHdP3MYvgFbWJNNMQEm6yTzX7RBFXBhB0ElCM-VloFI3QNmJosYA~UEuyZfMiRSCMzRo5btJnEXA__&Key-Pair-Id=APKAJVI4C2YLKAQ7KO6A","ImageFileUrlSmall":"https://secure-downloads.innova.com/dlc-location-images-wm/acura/ilx/ilx-1-sm.jpg?Expires=1759222545&Signature=QMmcgItNBIrmGx-xl-a-XQ6~bmW3xb3GIIrXY9G4B3bz6sLOYTmw5xLO80UFLsKhFKdT3mhu83I2Et3~gL1Ac7FDfkd3wpGt1oKPqCFgTrDbWlPH0md3l6T0gZdPeAqWp-PJi4GWXyurQeWzw6~I06s4-pfB9Hkcxzs0bRu5Y5po1~EBjfNQpxXb6qUz8e2tRfxIDMQeQCWGVR0gbBBc9wo2o9DpmGBAeg0G-SbQiSqGRG2q8EQLjfD-RDdf9e7yBmFCOLSucD53BlerynaUztLogDzJiHWQ0nB958W8MHBTQG7S9O2JTKLnnoP0c7Yj7D0UF7Howfo4IVvejyU0Pg__&Key-Pair-Id=APKAJVI4C2YLKAQ7KO6A"}]}
+

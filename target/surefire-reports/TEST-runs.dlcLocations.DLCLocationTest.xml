@@ -1,0 +1,804 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<testsuite xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="https://maven.apache.org/surefire/maven-surefire-plugin/xsd/surefire-test-report-3.0.xsd" version="3.0" name="runs.dlcLocations.DLCLocationTest" time="21.908" tests="17" errors="0" skipped="0" failures="2">
+  <properties>
+    <property name="java.specification.version" value="21"/>
+    <property name="sun.jnu.encoding" value="UTF-8"/>
+    <property name="java.class.path" value="/app/target/test-classes:/app/target/classes:/root/.m2/repository/com/intuit/karate/karate-junit5/1.4.0/karate-junit5-1.4.0.jar:/root/.m2/repository/com/intuit/karate/karate-core/1.4.0/karate-core-1.4.0.jar:/root/.m2/repository/org/graalvm/js/js-scriptengine/22.3.0/js-scriptengine-22.3.0.jar:/root/.m2/repository/org/graalvm/sdk/graal-sdk/22.3.0/graal-sdk-22.3.0.jar:/root/.m2/repository/org/graalvm/js/js/22.3.0/js-22.3.0.jar:/root/.m2/repository/org/graalvm/regex/regex/22.3.0/regex-22.3.0.jar:/root/.m2/repository/org/graalvm/truffle/truffle-api/22.3.0/truffle-api-22.3.0.jar:/root/.m2/repository/com/ibm/icu/icu4j/71.1/icu4j-71.1.jar:/root/.m2/repository/org/thymeleaf/thymeleaf/3.0.14.RELEASE/thymeleaf-3.0.14.RELEASE.jar:/root/.m2/repository/ognl/ognl/3.1.26/ognl-3.1.26.jar:/root/.m2/repository/org/javassist/javassist/3.20.0-GA/javassist-3.20.0-GA.jar:/root/.m2/repository/org/attoparser/attoparser/2.0.5.RELEASE/attoparser-2.0.5.RELEASE.jar:/root/.m2/repository/org/unbescape/unbescape/1.1.6.RELEASE/unbescape-1.1.6.RELEASE.jar:/root/.m2/repository/org/slf4j/slf4j-api/1.7.25/slf4j-api-1.7.25.jar:/root/.m2/repository/com/linecorp/armeria/armeria/1.22.0/armeria-1.22.0.jar:/root/.m2/repository/com/fasterxml/jackson/datatype/jackson-datatype-jdk8/2.14.2/jackson-datatype-jdk8-2.14.2.jar:/root/.m2/repository/com/fasterxml/jackson/datatype/jackson-datatype-jsr310/2.14.2/jackson-datatype-jsr310-2.14.2.jar:/root/.m2/repository/io/micrometer/micrometer-core/1.10.3/micrometer-core-1.10.3.jar:/root/.m2/repository/io/micrometer/micrometer-commons/1.10.3/micrometer-commons-1.10.3.jar:/root/.m2/repository/io/micrometer/micrometer-observation/1.10.3/micrometer-observation-1.10.3.jar:/root/.m2/repository/org/hdrhistogram/HdrHistogram/2.1.12/HdrHistogram-2.1.12.jar:/root/.m2/repository/org/latencyutils/LatencyUtils/2.0.3/LatencyUtils-2.0.3.jar:/root/.m2/repository/io/netty/netty-transport/4.1.87.Final/netty-transport-4.1.87.Final.jar:/root/.m2/repository/io/netty/netty-common/4.1.87.Final/netty-common-4.1.87.Final.jar:/root/.m2/repository/io/netty/netty-buffer/4.1.87.Final/netty-buffer-4.1.87.Final.jar:/root/.m2/repository/io/netty/netty-resolver/4.1.87.Final/netty-resolver-4.1.87.Final.jar:/root/.m2/repository/io/netty/netty-codec-haproxy/4.1.87.Final/netty-codec-haproxy-4.1.87.Final.jar:/root/.m2/repository/io/netty/netty-codec/4.1.87.Final/netty-codec-4.1.87.Final.jar:/root/.m2/repository/io/netty/netty-codec-http2/4.1.87.Final/netty-codec-http2-4.1.87.Final.jar:/root/.m2/repository/io/netty/netty-handler/4.1.87.Final/netty-handler-4.1.87.Final.jar:/root/.m2/repository/io/netty/netty-codec-http/4.1.87.Final/netty-codec-http-4.1.87.Final.jar:/root/.m2/repository/io/netty/netty-resolver-dns/4.1.87.Final/netty-resolver-dns-4.1.87.Final.jar:/root/.m2/repository/io/netty/netty-codec-dns/4.1.87.Final/netty-codec-dns-4.1.87.Final.jar:/root/.m2/repository/org/reactivestreams/reactive-streams/1.0.4/reactive-streams-1.0.4.jar:/root/.m2/repository/com/google/code/findbugs/jsr305/3.0.2/jsr305-3.0.2.jar:/root/.m2/repository/io/netty/netty-transport-native-unix-common/4.1.87.Final/netty-transport-native-unix-common-4.1.87.Final-linux-x86_64.jar:/root/.m2/repository/io/netty/netty-transport-native-epoll/4.1.87.Final/netty-transport-native-epoll-4.1.87.Final-linux-x86_64.jar:/root/.m2/repository/io/netty/netty-transport-native-unix-common/4.1.87.Final/netty-transport-native-unix-common-4.1.87.Final.jar:/root/.m2/repository/io/netty/netty-transport-classes-epoll/4.1.87.Final/netty-transport-classes-epoll-4.1.87.Final.jar:/root/.m2/repository/io/netty/netty-resolver-dns-native-macos/4.1.87.Final/netty-resolver-dns-native-macos-4.1.87.Final-osx-x86_64.jar:/root/.m2/repository/io/netty/netty-resolver-dns-classes-macos/4.1.87.Final/netty-resolver-dns-classes-macos-4.1.87.Final.jar:/root/.m2/repository/io/netty/netty-resolver-dns-native-macos/4.1.87.Final/netty-resolver-dns-native-macos-4.1.87.Final-osx-aarch_64.jar:/root/.m2/repository/io/netty/netty-tcnative-boringssl-static/2.0.56.Final/netty-tcnative-boringssl-static-2.0.56.Final-linux-x86_64.jar:/root/.m2/repository/io/netty/netty-tcnative-classes/2.0.56.Final/netty-tcnative-classes-2.0.56.Final.jar:/root/.m2/repository/io/netty/netty-tcnative-boringssl-static/2.0.56.Final/netty-tcnative-boringssl-static-2.0.56.Final-linux-aarch_64.jar:/root/.m2/repository/io/netty/netty-tcnative-boringssl-static/2.0.56.Final/netty-tcnative-boringssl-static-2.0.56.Final-osx-x86_64.jar:/root/.m2/repository/io/netty/netty-tcnative-boringssl-static/2.0.56.Final/netty-tcnative-boringssl-static-2.0.56.Final-osx-aarch_64.jar:/root/.m2/repository/io/netty/netty-tcnative-boringssl-static/2.0.56.Final/netty-tcnative-boringssl-static-2.0.56.Final-windows-x86_64.jar:/root/.m2/repository/io/netty/netty-handler-proxy/4.1.87.Final/netty-handler-proxy-4.1.87.Final.jar:/root/.m2/repository/io/netty/netty-codec-socks/4.1.87.Final/netty-codec-socks-4.1.87.Final.jar:/root/.m2/repository/com/aayushatharva/brotli4j/brotli4j/1.9.0/brotli4j-1.9.0.jar:/root/.m2/repository/org/apache/httpcomponents/httpclient/4.5.14/httpclient-4.5.14.jar:/root/.m2/repository/org/apache/httpcomponents/httpcore/4.4.16/httpcore-4.4.16.jar:/root/.m2/repository/commons-codec/commons-codec/1.11/commons-codec-1.11.jar:/root/.m2/repository/ch/qos/logback/logback-classic/1.2.9/logback-classic-1.2.9.jar:/root/.m2/repository/ch/qos/logback/logback-core/1.2.9/logback-core-1.2.9.jar:/root/.m2/repository/org/slf4j/jcl-over-slf4j/1.7.32/jcl-over-slf4j-1.7.32.jar:/root/.m2/repository/org/antlr/antlr4-runtime/4.11.1/antlr4-runtime-4.11.1.jar:/root/.m2/repository/com/jayway/jsonpath/json-path/2.8.0/json-path-2.8.0.jar:/root/.m2/repository/net/minidev/json-smart/2.4.10/json-smart-2.4.10.jar:/root/.m2/repository/net/minidev/accessors-smart/2.4.9/accessors-smart-2.4.9.jar:/root/.m2/repository/org/ow2/asm/asm/9.3/asm-9.3.jar:/root/.m2/repository/org/yaml/snakeyaml/2.0/snakeyaml-2.0.jar:/root/.m2/repository/de/siegmar/fastcsv/2.2.1/fastcsv-2.2.1.jar:/root/.m2/repository/info/picocli/picocli/4.7.1/picocli-4.7.1.jar:/root/.m2/repository/io/github/classgraph/classgraph/4.8.152/classgraph-4.8.152.jar:/root/.m2/repository/io/github/t12y/resemble/1.0.2/resemble-1.0.2.jar:/root/.m2/repository/io/github/t12y/ssim/1.0.0/ssim-1.0.0.jar:/root/.m2/repository/org/junit/jupiter/junit-jupiter-api/5.9.1/junit-jupiter-api-5.9.1.jar:/root/.m2/repository/org/opentest4j/opentest4j/1.2.0/opentest4j-1.2.0.jar:/root/.m2/repository/org/junit/platform/junit-platform-commons/1.9.1/junit-platform-commons-1.9.1.jar:/root/.m2/repository/org/apiguardian/apiguardian-api/1.1.2/apiguardian-api-1.1.2.jar:/root/.m2/repository/org/junit/jupiter/junit-jupiter-engine/5.9.1/junit-jupiter-engine-5.9.1.jar:/root/.m2/repository/org/junit/platform/junit-platform-engine/1.9.1/junit-platform-engine-1.9.1.jar:/root/.m2/repository/com/fasterxml/jackson/core/jackson-databind/2.17.2/jackson-databind-2.17.2.jar:/root/.m2/repository/com/fasterxml/jackson/core/jackson-annotations/2.17.2/jackson-annotations-2.17.2.jar:/root/.m2/repository/com/fasterxml/jackson/core/jackson-core/2.17.2/jackson-core-2.17.2.jar:/root/.m2/repository/com/microsoft/sqlserver/mssql-jdbc/11.2.1.jre17/mssql-jdbc-11.2.1.jre17.jar:"/>
+    <property name="java.vm.vendor" value="Eclipse Adoptium"/>
+    <property name="sun.arch.data.model" value="64"/>
+    <property name="java.vendor.url" value="https://adoptium.net/"/>
+    <property name="user.timezone" value="Etc/UTC"/>
+    <property name="os.name" value="Linux"/>
+    <property name="java.vm.specification.version" value="21"/>
+    <property name="sun.java.launcher" value="SUN_STANDARD"/>
+    <property name="user.country" value="US"/>
+    <property name="sun.boot.library.path" value="/opt/java/openjdk/lib"/>
+    <property name="sun.java.command" value="/app/target/surefire/surefirebooter-20250930085023513_3.jar /app/target/surefire 2025-09-30T08-50-22_380-jvmRun1 surefire-20250930085023513_1tmp surefire_0-20250930085023513_2tmp"/>
+    <property name="jdk.debug" value="release"/>
+    <property name="test" value="DLCLocationTest"/>
+    <property name="surefire.test.class.path" value="/app/target/test-classes:/app/target/classes:/root/.m2/repository/com/intuit/karate/karate-junit5/1.4.0/karate-junit5-1.4.0.jar:/root/.m2/repository/com/intuit/karate/karate-core/1.4.0/karate-core-1.4.0.jar:/root/.m2/repository/org/graalvm/js/js-scriptengine/22.3.0/js-scriptengine-22.3.0.jar:/root/.m2/repository/org/graalvm/sdk/graal-sdk/22.3.0/graal-sdk-22.3.0.jar:/root/.m2/repository/org/graalvm/js/js/22.3.0/js-22.3.0.jar:/root/.m2/repository/org/graalvm/regex/regex/22.3.0/regex-22.3.0.jar:/root/.m2/repository/org/graalvm/truffle/truffle-api/22.3.0/truffle-api-22.3.0.jar:/root/.m2/repository/com/ibm/icu/icu4j/71.1/icu4j-71.1.jar:/root/.m2/repository/org/thymeleaf/thymeleaf/3.0.14.RELEASE/thymeleaf-3.0.14.RELEASE.jar:/root/.m2/repository/ognl/ognl/3.1.26/ognl-3.1.26.jar:/root/.m2/repository/org/javassist/javassist/3.20.0-GA/javassist-3.20.0-GA.jar:/root/.m2/repository/org/attoparser/attoparser/2.0.5.RELEASE/attoparser-2.0.5.RELEASE.jar:/root/.m2/repository/org/unbescape/unbescape/1.1.6.RELEASE/unbescape-1.1.6.RELEASE.jar:/root/.m2/repository/org/slf4j/slf4j-api/1.7.25/slf4j-api-1.7.25.jar:/root/.m2/repository/com/linecorp/armeria/armeria/1.22.0/armeria-1.22.0.jar:/root/.m2/repository/com/fasterxml/jackson/datatype/jackson-datatype-jdk8/2.14.2/jackson-datatype-jdk8-2.14.2.jar:/root/.m2/repository/com/fasterxml/jackson/datatype/jackson-datatype-jsr310/2.14.2/jackson-datatype-jsr310-2.14.2.jar:/root/.m2/repository/io/micrometer/micrometer-core/1.10.3/micrometer-core-1.10.3.jar:/root/.m2/repository/io/micrometer/micrometer-commons/1.10.3/micrometer-commons-1.10.3.jar:/root/.m2/repository/io/micrometer/micrometer-observation/1.10.3/micrometer-observation-1.10.3.jar:/root/.m2/repository/org/hdrhistogram/HdrHistogram/2.1.12/HdrHistogram-2.1.12.jar:/root/.m2/repository/org/latencyutils/LatencyUtils/2.0.3/LatencyUtils-2.0.3.jar:/root/.m2/repository/io/netty/netty-transport/4.1.87.Final/netty-transport-4.1.87.Final.jar:/root/.m2/repository/io/netty/netty-common/4.1.87.Final/netty-common-4.1.87.Final.jar:/root/.m2/repository/io/netty/netty-buffer/4.1.87.Final/netty-buffer-4.1.87.Final.jar:/root/.m2/repository/io/netty/netty-resolver/4.1.87.Final/netty-resolver-4.1.87.Final.jar:/root/.m2/repository/io/netty/netty-codec-haproxy/4.1.87.Final/netty-codec-haproxy-4.1.87.Final.jar:/root/.m2/repository/io/netty/netty-codec/4.1.87.Final/netty-codec-4.1.87.Final.jar:/root/.m2/repository/io/netty/netty-codec-http2/4.1.87.Final/netty-codec-http2-4.1.87.Final.jar:/root/.m2/repository/io/netty/netty-handler/4.1.87.Final/netty-handler-4.1.87.Final.jar:/root/.m2/repository/io/netty/netty-codec-http/4.1.87.Final/netty-codec-http-4.1.87.Final.jar:/root/.m2/repository/io/netty/netty-resolver-dns/4.1.87.Final/netty-resolver-dns-4.1.87.Final.jar:/root/.m2/repository/io/netty/netty-codec-dns/4.1.87.Final/netty-codec-dns-4.1.87.Final.jar:/root/.m2/repository/org/reactivestreams/reactive-streams/1.0.4/reactive-streams-1.0.4.jar:/root/.m2/repository/com/google/code/findbugs/jsr305/3.0.2/jsr305-3.0.2.jar:/root/.m2/repository/io/netty/netty-transport-native-unix-common/4.1.87.Final/netty-transport-native-unix-common-4.1.87.Final-linux-x86_64.jar:/root/.m2/repository/io/netty/netty-transport-native-epoll/4.1.87.Final/netty-transport-native-epoll-4.1.87.Final-linux-x86_64.jar:/root/.m2/repository/io/netty/netty-transport-native-unix-common/4.1.87.Final/netty-transport-native-unix-common-4.1.87.Final.jar:/root/.m2/repository/io/netty/netty-transport-classes-epoll/4.1.87.Final/netty-transport-classes-epoll-4.1.87.Final.jar:/root/.m2/repository/io/netty/netty-resolver-dns-native-macos/4.1.87.Final/netty-resolver-dns-native-macos-4.1.87.Final-osx-x86_64.jar:/root/.m2/repository/io/netty/netty-resolver-dns-classes-macos/4.1.87.Final/netty-resolver-dns-classes-macos-4.1.87.Final.jar:/root/.m2/repository/io/netty/netty-resolver-dns-native-macos/4.1.87.Final/netty-resolver-dns-native-macos-4.1.87.Final-osx-aarch_64.jar:/root/.m2/repository/io/netty/netty-tcnative-boringssl-static/2.0.56.Final/netty-tcnative-boringssl-static-2.0.56.Final-linux-x86_64.jar:/root/.m2/repository/io/netty/netty-tcnative-classes/2.0.56.Final/netty-tcnative-classes-2.0.56.Final.jar:/root/.m2/repository/io/netty/netty-tcnative-boringssl-static/2.0.56.Final/netty-tcnative-boringssl-static-2.0.56.Final-linux-aarch_64.jar:/root/.m2/repository/io/netty/netty-tcnative-boringssl-static/2.0.56.Final/netty-tcnative-boringssl-static-2.0.56.Final-osx-x86_64.jar:/root/.m2/repository/io/netty/netty-tcnative-boringssl-static/2.0.56.Final/netty-tcnative-boringssl-static-2.0.56.Final-osx-aarch_64.jar:/root/.m2/repository/io/netty/netty-tcnative-boringssl-static/2.0.56.Final/netty-tcnative-boringssl-static-2.0.56.Final-windows-x86_64.jar:/root/.m2/repository/io/netty/netty-handler-proxy/4.1.87.Final/netty-handler-proxy-4.1.87.Final.jar:/root/.m2/repository/io/netty/netty-codec-socks/4.1.87.Final/netty-codec-socks-4.1.87.Final.jar:/root/.m2/repository/com/aayushatharva/brotli4j/brotli4j/1.9.0/brotli4j-1.9.0.jar:/root/.m2/repository/org/apache/httpcomponents/httpclient/4.5.14/httpclient-4.5.14.jar:/root/.m2/repository/org/apache/httpcomponents/httpcore/4.4.16/httpcore-4.4.16.jar:/root/.m2/repository/commons-codec/commons-codec/1.11/commons-codec-1.11.jar:/root/.m2/repository/ch/qos/logback/logback-classic/1.2.9/logback-classic-1.2.9.jar:/root/.m2/repository/ch/qos/logback/logback-core/1.2.9/logback-core-1.2.9.jar:/root/.m2/repository/org/slf4j/jcl-over-slf4j/1.7.32/jcl-over-slf4j-1.7.32.jar:/root/.m2/repository/org/antlr/antlr4-runtime/4.11.1/antlr4-runtime-4.11.1.jar:/root/.m2/repository/com/jayway/jsonpath/json-path/2.8.0/json-path-2.8.0.jar:/root/.m2/repository/net/minidev/json-smart/2.4.10/json-smart-2.4.10.jar:/root/.m2/repository/net/minidev/accessors-smart/2.4.9/accessors-smart-2.4.9.jar:/root/.m2/repository/org/ow2/asm/asm/9.3/asm-9.3.jar:/root/.m2/repository/org/yaml/snakeyaml/2.0/snakeyaml-2.0.jar:/root/.m2/repository/de/siegmar/fastcsv/2.2.1/fastcsv-2.2.1.jar:/root/.m2/repository/info/picocli/picocli/4.7.1/picocli-4.7.1.jar:/root/.m2/repository/io/github/classgraph/classgraph/4.8.152/classgraph-4.8.152.jar:/root/.m2/repository/io/github/t12y/resemble/1.0.2/resemble-1.0.2.jar:/root/.m2/repository/io/github/t12y/ssim/1.0.0/ssim-1.0.0.jar:/root/.m2/repository/org/junit/jupiter/junit-jupiter-api/5.9.1/junit-jupiter-api-5.9.1.jar:/root/.m2/repository/org/opentest4j/opentest4j/1.2.0/opentest4j-1.2.0.jar:/root/.m2/repository/org/junit/platform/junit-platform-commons/1.9.1/junit-platform-commons-1.9.1.jar:/root/.m2/repository/org/apiguardian/apiguardian-api/1.1.2/apiguardian-api-1.1.2.jar:/root/.m2/repository/org/junit/jupiter/junit-jupiter-engine/5.9.1/junit-jupiter-engine-5.9.1.jar:/root/.m2/repository/org/junit/platform/junit-platform-engine/1.9.1/junit-platform-engine-1.9.1.jar:/root/.m2/repository/com/fasterxml/jackson/core/jackson-databind/2.17.2/jackson-databind-2.17.2.jar:/root/.m2/repository/com/fasterxml/jackson/core/jackson-annotations/2.17.2/jackson-annotations-2.17.2.jar:/root/.m2/repository/com/fasterxml/jackson/core/jackson-core/2.17.2/jackson-core-2.17.2.jar:/root/.m2/repository/com/microsoft/sqlserver/mssql-jdbc/11.2.1.jre17/mssql-jdbc-11.2.1.jre17.jar:"/>
+    <property name="sun.cpu.endian" value="little"/>
+    <property name="user.home" value="/root"/>
+    <property name="user.language" value="en"/>
+    <property name="java.specification.vendor" value="Oracle Corporation"/>
+    <property name="java.version.date" value="2024-04-16"/>
+    <property name="java.home" value="/opt/java/openjdk"/>
+    <property name="file.separator" value="/"/>
+    <property name="basedir" value="/app"/>
+    <property name="java.vm.compressedOopsMode" value="Zero based"/>
+    <property name="line.separator" value="&#10;"/>
+    <property name="java.vm.specification.vendor" value="Oracle Corporation"/>
+    <property name="java.specification.name" value="Java Platform API Specification"/>
+    <property name="surefire.real.class.path" value="/app/target/surefire/surefirebooter-20250930085023513_3.jar"/>
+    <property name="sun.management.compiler" value="HotSpot 64-Bit Tiered Compilers"/>
+    <property name="java.runtime.version" value="21.0.3+9-LTS"/>
+    <property name="user.name" value="root"/>
+    <property name="stdout.encoding" value="UTF-8"/>
+    <property name="path.separator" value=":"/>
+    <property name="os.version" value="5.15.167.4-microsoft-standard-WSL2"/>
+    <property name="java.runtime.name" value="OpenJDK Runtime Environment"/>
+    <property name="file.encoding" value="UTF-8"/>
+    <property name="java.vm.name" value="OpenJDK 64-Bit Server VM"/>
+    <property name="java.vendor.version" value="Temurin-21.0.3+9"/>
+    <property name="localRepository" value="/root/.m2/repository"/>
+    <property name="java.vendor.url.bug" value="https://github.com/adoptium/adoptium-support/issues"/>
+    <property name="java.io.tmpdir" value="/tmp"/>
+    <property name="java.version" value="21.0.3"/>
+    <property name="user.dir" value="/app"/>
+    <property name="os.arch" value="amd64"/>
+    <property name="java.vm.specification.name" value="Java Virtual Machine Specification"/>
+    <property name="native.encoding" value="UTF-8"/>
+    <property name="java.library.path" value="/usr/java/packages/lib:/usr/lib64:/lib64:/lib:/usr/lib"/>
+    <property name="java.vm.info" value="mixed mode, sharing"/>
+    <property name="stderr.encoding" value="UTF-8"/>
+    <property name="java.vendor" value="Eclipse Adoptium"/>
+    <property name="java.vm.version" value="21.0.3+9-LTS"/>
+    <property name="sun.io.unicode.encoding" value="UnicodeLittle"/>
+    <property name="java.class.version" value="65.0"/>
+  </properties>
+  <testcase name="[1.1:26] Invalid Language and VIN" classname="resources/apis/dlc-locations/dlc-locations-by-vin" time="3.606">
+    <system-out><![CDATA[08:50:26.143 [main] DEBUG com.intuit.karate.Suite - [config] classpath:karate-config.js
+08:50:28.121 [main] INFO  com.intuit.karate - karate.env system property was: null 
+08:50:28.669 [main] DEBUG com.intuit.karate - request:
+1 > POST https://dev-core-service.innova.com/api/dlc-locations
+1 > Content-Type: application/json; charset=UTF-8
+1 > Accept: application/json
+1 > api-key: EJPLzfSyCmdDSUzhG9LJwt3MCgTrAN
+1 > Content-Length: 28
+1 > Host: dev-core-service.innova.com
+1 > Connection: Keep-Alive
+1 > User-Agent: Apache-HttpClient/4.5.14 (Java/21.0.3)
+1 > Accept-Encoding: gzip,deflate
+{"Language":null,"Vin":null}
+
+08:50:31.595 [main] DEBUG com.intuit.karate - response time in milliseconds: 2921
+1 < 400
+1 < Transfer-Encoding: chunked
+1 < Content-Type: application/json; charset=utf-8
+1 < Server: Microsoft-IIS/10.0
+1 < X-Powered-By: ASP.NET
+1 < Date: Tue, 30 Sep 2025 08:50:31 GMT
+{"TraceId":"306552beeea8676d57f81407f5fcbebb","Ok":false,"Message":"Invalid data provided","Data":[{"Field":"Vin","Error":"The Vin field is required."},{"Field":"Language","Error":"The Language field is required."}]}
+
+08:50:31.626 [main] INFO  com.intuit.karate - [print] Data:  [
+  {
+    "Field": "Vin",
+    "Error": "The Vin field is required."
+  },
+  {
+    "Field": "Language",
+    "Error": "The Language field is required."
+  }
+]
+ 
+]]></system-out>
+  </testcase>
+  <testcase name="[1.2:26] Invalid Language" classname="resources/apis/dlc-locations/dlc-locations-by-vin" time="0.787">
+    <system-out><![CDATA[08:50:31.663 [main] INFO  com.intuit.karate - karate.env system property was: null 
+08:50:31.680 [main] DEBUG com.intuit.karate - request:
+1 > POST https://dev-core-service.innova.com/api/dlc-locations
+1 > Content-Type: application/json; charset=UTF-8
+1 > Accept: application/json
+1 > api-key: EJPLzfSyCmdDSUzhG9LJwt3MCgTrAN
+1 > Content-Length: 43
+1 > Host: dev-core-service.innova.com
+1 > Connection: Keep-Alive
+1 > User-Agent: Apache-HttpClient/4.5.14 (Java/21.0.3)
+1 > Accept-Encoding: gzip,deflate
+{"Language":null,"Vin":"JM1DRACB*N1******"}
+
+08:50:32.429 [main] DEBUG com.intuit.karate - response time in milliseconds: 747
+1 < 400
+1 < Transfer-Encoding: chunked
+1 < Content-Type: application/json; charset=utf-8
+1 < Server: Microsoft-IIS/10.0
+1 < X-Powered-By: ASP.NET
+1 < Date: Tue, 30 Sep 2025 08:50:31 GMT
+{"TraceId":"4a161b2a234362871c6d7851d05a0dbb","Ok":false,"Message":"Invalid data provided","Data":[{"Field":"Language","Error":"The Language field is required."}]}
+
+08:50:32.435 [main] INFO  com.intuit.karate - [print] Data:  [
+  {
+    "Field": "Language",
+    "Error": "The Language field is required."
+  }
+]
+ 
+]]></system-out>
+  </testcase>
+  <testcase name="[1.3:26] Invalid VIN" classname="resources/apis/dlc-locations/dlc-locations-by-vin" time="0.862">
+    <system-out><![CDATA[08:50:32.459 [main] INFO  com.intuit.karate - karate.env system property was: null 
+08:50:32.468 [main] DEBUG com.intuit.karate - request:
+1 > POST https://dev-core-service.innova.com/api/dlc-locations
+1 > Content-Type: application/json; charset=UTF-8
+1 > Accept: application/json
+1 > api-key: EJPLzfSyCmdDSUzhG9LJwt3MCgTrAN
+1 > Content-Length: 31
+1 > Host: dev-core-service.innova.com
+1 > Connection: Keep-Alive
+1 > User-Agent: Apache-HttpClient/4.5.14 (Java/21.0.3)
+1 > Accept-Encoding: gzip,deflate
+{"Language":"en-us","Vin":null}
+
+08:50:33.307 [main] DEBUG com.intuit.karate - response time in milliseconds: 838
+1 < 400
+1 < Transfer-Encoding: chunked
+1 < Content-Type: application/json; charset=utf-8
+1 < Server: Microsoft-IIS/10.0
+1 < X-Powered-By: ASP.NET
+1 < Date: Tue, 30 Sep 2025 08:50:32 GMT
+{"TraceId":"21c386106954917486a81f5a0ae7861e","Ok":false,"Message":"Invalid data provided","Data":[{"Field":"Vin","Error":"The Vin field is required."}]}
+
+08:50:33.309 [main] INFO  com.intuit.karate - [print] Data:  [
+  {
+    "Field": "Vin",
+    "Error": "The Vin field is required."
+  }
+]
+ 
+]]></system-out>
+  </testcase>
+  <testcase name="[1.4:26] Invalid VIN Format" classname="resources/apis/dlc-locations/dlc-locations-by-vin" time="0.851">
+    <system-out><![CDATA[08:50:33.329 [main] INFO  com.intuit.karate - karate.env system property was: null 
+08:50:33.336 [main] DEBUG com.intuit.karate - request:
+1 > POST https://dev-core-service.innova.com/api/dlc-locations
+1 > Content-Type: application/json; charset=UTF-8
+1 > Accept: application/json
+1 > api-key: EJPLzfSyCmdDSUzhG9LJwt3MCgTrAN
+1 > Content-Length: 48
+1 > Host: dev-core-service.innova.com
+1 > Connection: Keep-Alive
+1 > User-Agent: Apache-HttpClient/4.5.14 (Java/21.0.3)
+1 > Accept-Encoding: gzip,deflate
+{"Language":"en-us","Vin":"JM1DRACB*N1******__"}
+
+08:50:34.161 [main] DEBUG com.intuit.karate - response time in milliseconds: 824
+1 < 200
+1 < Transfer-Encoding: chunked
+1 < Content-Type: application/json; charset=utf-8
+1 < Server: Microsoft-IIS/10.0
+1 < X-Powered-By: ASP.NET
+1 < Date: Tue, 30 Sep 2025 08:50:34 GMT
+{"TraceId":"699e72799b15551a85a31fae1a71d5a0","Ok":false,"Message":"The VIN supplied is invalid. The following VINs were tried and failed: JM1DRACB*N1******__","Data":null}
+
+08:50:34.169 [main] INFO  com.intuit.karate - [print] Data:  null 
+]]></system-out>
+  </testcase>
+  <testcase name="[1.5:26] Invalid Api Key (Authentication Check)" classname="resources/apis/dlc-locations/dlc-locations-by-vin" time="0.845">
+    <system-out><![CDATA[08:50:34.199 [main] INFO  com.intuit.karate - karate.env system property was: null 
+08:50:34.216 [main] DEBUG com.intuit.karate - request:
+1 > POST https://dev-core-service.innova.com/api/dlc-locations
+1 > Content-Type: application/json; charset=UTF-8
+1 > Accept: application/json
+1 > api-key: abc123
+1 > Content-Length: 46
+1 > Host: dev-core-service.innova.com
+1 > Connection: Keep-Alive
+1 > User-Agent: Apache-HttpClient/4.5.14 (Java/21.0.3)
+1 > Accept-Encoding: gzip,deflate
+{"Language":"en-us","Vin":"JM1DRACB*N1******"}
+
+08:50:35.031 [main] DEBUG com.intuit.karate - response time in milliseconds: 812
+1 < 401
+1 < Transfer-Encoding: chunked
+1 < Content-Type: application/json
+1 < Server: Microsoft-IIS/10.0
+1 < X-Powered-By: ASP.NET
+1 < Date: Tue, 30 Sep 2025 08:50:34 GMT
+{"TraceId":"34c9c8602b076dd0920db43bc8b31c10","Ok":false,"Message":"Invalid Api Key","Data":null}
+
+08:50:35.037 [main] INFO  com.intuit.karate - [print] Data:  null 
+]]></system-out>
+  </testcase>
+  <testcase name="[2:28] Verify DLC Location Info and verify ImageFileName is null by VIN: JM1DRACB*N1******" classname="resources/apis/dlc-locations/dlc-locations-by-vin" time="0.895">
+    <failure message="match failed: EQUALS&#10;  $ | evaluated to &apos;false&apos; (STRING:STRING)&#10;  &apos;https://secure-downloads.innova.com/dlc-location-images-wm/?Expires=1759222535&amp;Signature=AlYBSFeL~7lCiiWijjhwfw9rZKCHCde5-J3BxTDhdjozRCz3WtO4-KyEe9vHFGlRGepm2XdpIRRSWP8OS0NxPi6BmxCntKmDYfxMGLQckDA1XG8sjWo4LvVtOq18ND3WWDUhcJFDB461R6Bj3ijf9jldCf7ooFwN-cKLhc87J1DPG34KnJYSNYhlh-w-nLpy4FKo99GXlwYMKXReiYxVBeDAA6sP1ab5ImGN9VfYgFbzMbiIMxn8GtuZ5u97eqlz4t4DRsYpzmv3haGdyRe3GxGQWEci~cnhSQqkpuUTjNwmIAuFtQIptbw0sU1lnN2mzZHkXxp9xYl6gOFQrUfceQ__&amp;Key-Pair-Id=APKAJVI4C2YLKAQ7KO6A&apos;&#10;  &apos;#? _ == null || _ == &quot;&quot;&apos;&#10;&#10;classpath:resources/apis/dlc-locations/dlc-locations-by-vin.feature:46" type="org.opentest4j.AssertionFailedError"><![CDATA[org.opentest4j.AssertionFailedError: 
+match failed: EQUALS
+  $ | evaluated to 'false' (STRING:STRING)
+  'https://secure-downloads.innova.com/dlc-location-images-wm/?Expires=1759222535&Signature=AlYBSFeL~7lCiiWijjhwfw9rZKCHCde5-J3BxTDhdjozRCz3WtO4-KyEe9vHFGlRGepm2XdpIRRSWP8OS0NxPi6BmxCntKmDYfxMGLQckDA1XG8sjWo4LvVtOq18ND3WWDUhcJFDB461R6Bj3ijf9jldCf7ooFwN-cKLhc87J1DPG34KnJYSNYhlh-w-nLpy4FKo99GXlwYMKXReiYxVBeDAA6sP1ab5ImGN9VfYgFbzMbiIMxn8GtuZ5u97eqlz4t4DRsYpzmv3haGdyRe3GxGQWEci~cnhSQqkpuUTjNwmIAuFtQIptbw0sU1lnN2mzZHkXxp9xYl6gOFQrUfceQ__&Key-Pair-Id=APKAJVI4C2YLKAQ7KO6A'
+  '#? _ == null || _ == ""'
+
+classpath:resources/apis/dlc-locations/dlc-locations-by-vin.feature:46
+	at org.junit.jupiter.api.AssertionUtils.fail(AssertionUtils.java:38)
+	at org.junit.jupiter.api.Assertions.fail(Assertions.java:135)
+	at com.intuit.karate.junit5.FeatureNode.lambda$next$1(FeatureNode.java:86)
+	at org.junit.jupiter.engine.descriptor.DynamicTestTestDescriptor.lambda$execute$0(DynamicTestTestDescriptor.java:53)
+	at org.junit.jupiter.engine.execution.InvocationInterceptorChain$ValidatingInvocation.proceed(InvocationInterceptorChain.java:131)
+	at org.junit.jupiter.api.extension.InvocationInterceptor.interceptDynamicTest(InvocationInterceptor.java:167)
+	at org.junit.jupiter.api.extension.InvocationInterceptor.interceptDynamicTest(InvocationInterceptor.java:184)
+	at org.junit.jupiter.engine.descriptor.DynamicTestTestDescriptor.lambda$execute$1(DynamicTestTestDescriptor.java:61)
+	at org.junit.jupiter.engine.execution.InvocationInterceptorChain$InterceptorCall.lambda$ofVoid$0(InvocationInterceptorChain.java:78)
+	at org.junit.jupiter.engine.execution.InvocationInterceptorChain$InterceptedInvocation.proceed(InvocationInterceptorChain.java:106)
+	at org.junit.jupiter.engine.execution.InvocationInterceptorChain.proceed(InvocationInterceptorChain.java:64)
+	at org.junit.jupiter.engine.execution.InvocationInterceptorChain.chainAndInvoke(InvocationInterceptorChain.java:45)
+	at org.junit.jupiter.engine.execution.InvocationInterceptorChain.invoke(InvocationInterceptorChain.java:37)
+	at org.junit.jupiter.engine.descriptor.DynamicTestTestDescriptor.execute(DynamicTestTestDescriptor.java:60)
+	at org.junit.jupiter.engine.descriptor.DynamicTestTestDescriptor.execute(DynamicTestTestDescriptor.java:32)
+	at org.junit.platform.engine.support.hierarchical.NodeTestTask.lambda$executeRecursively$6(NodeTestTask.java:151)
+	at org.junit.platform.engine.support.hierarchical.ThrowableCollector.execute(ThrowableCollector.java:73)
+	at org.junit.platform.engine.support.hierarchical.NodeTestTask.lambda$executeRecursively$8(NodeTestTask.java:141)
+	at org.junit.platform.engine.support.hierarchical.Node.around(Node.java:137)
+	at org.junit.platform.engine.support.hierarchical.NodeTestTask.lambda$executeRecursively$9(NodeTestTask.java:139)
+	at org.junit.platform.engine.support.hierarchical.ThrowableCollector.execute(ThrowableCollector.java:73)
+	at org.junit.platform.engine.support.hierarchical.NodeTestTask.executeRecursively(NodeTestTask.java:138)
+	at org.junit.platform.engine.support.hierarchical.NodeTestTask.execute(NodeTestTask.java:95)
+	at org.junit.platform.engine.support.hierarchical.SameThreadHierarchicalTestExecutorService.submit(SameThreadHierarchicalTestExecutorService.java:35)
+	at org.junit.platform.engine.support.hierarchical.NodeTestTask$DefaultDynamicTestExecutor.execute(NodeTestTask.java:226)
+	at org.junit.platform.engine.support.hierarchical.NodeTestTask$DefaultDynamicTestExecutor.execute(NodeTestTask.java:204)
+	at java.base/java.util.stream.ForEachOps$ForEachOp$OfRef.accept(ForEachOps.java:184)
+	at java.base/java.util.stream.ReferencePipeline$3$1.accept(ReferencePipeline.java:197)
+	at java.base/java.util.stream.ReferencePipeline$2$1.accept(ReferencePipeline.java:179)
+	at java.base/java.util.stream.ReferencePipeline$3$1.accept(ReferencePipeline.java:197)
+	at java.base/java.util.Iterator.forEachRemaining(Iterator.java:133)
+	at java.base/java.util.Spliterators$IteratorSpliterator.forEachRemaining(Spliterators.java:1939)
+	at java.base/java.util.stream.AbstractPipeline.copyInto(AbstractPipeline.java:509)
+	at java.base/java.util.stream.AbstractPipeline.wrapAndCopyInto(AbstractPipeline.java:499)
+	at java.base/java.util.stream.ForEachOps$ForEachOp.evaluateSequential(ForEachOps.java:151)
+	at java.base/java.util.stream.ForEachOps$ForEachOp$OfRef.evaluateSequential(ForEachOps.java:174)
+	at java.base/java.util.stream.AbstractPipeline.evaluate(AbstractPipeline.java:234)
+	at java.base/java.util.stream.ReferencePipeline.forEachOrdered(ReferencePipeline.java:601)
+	at org.junit.jupiter.engine.descriptor.DynamicContainerTestDescriptor.execute(DynamicContainerTestDescriptor.java:67)
+	at org.junit.jupiter.engine.descriptor.DynamicContainerTestDescriptor.execute(DynamicContainerTestDescriptor.java:33)
+	at org.junit.platform.engine.support.hierarchical.NodeTestTask.lambda$executeRecursively$6(NodeTestTask.java:151)
+	at org.junit.platform.engine.support.hierarchical.ThrowableCollector.execute(ThrowableCollector.java:73)
+	at org.junit.platform.engine.support.hierarchical.NodeTestTask.lambda$executeRecursively$8(NodeTestTask.java:141)
+	at org.junit.platform.engine.support.hierarchical.Node.around(Node.java:137)
+	at org.junit.platform.engine.support.hierarchical.NodeTestTask.lambda$executeRecursively$9(NodeTestTask.java:139)
+	at org.junit.platform.engine.support.hierarchical.ThrowableCollector.execute(ThrowableCollector.java:73)
+	at org.junit.platform.engine.support.hierarchical.NodeTestTask.executeRecursively(NodeTestTask.java:138)
+	at org.junit.platform.engine.support.hierarchical.NodeTestTask.execute(NodeTestTask.java:95)
+	at org.junit.platform.engine.support.hierarchical.SameThreadHierarchicalTestExecutorService.submit(SameThreadHierarchicalTestExecutorService.java:35)
+	at org.junit.platform.engine.support.hierarchical.NodeTestTask$DefaultDynamicTestExecutor.execute(NodeTestTask.java:226)
+	at org.junit.platform.engine.support.hierarchical.NodeTestTask$DefaultDynamicTestExecutor.execute(NodeTestTask.java:204)
+	at java.base/java.util.Optional.ifPresent(Optional.java:178)
+	at org.junit.jupiter.engine.descriptor.TestFactoryTestDescriptor.lambda$invokeTestMethod$1(TestFactoryTestDescriptor.java:108)
+	at org.junit.platform.engine.support.hierarchical.ThrowableCollector.execute(ThrowableCollector.java:73)
+	at org.junit.jupiter.engine.descriptor.TestFactoryTestDescriptor.invokeTestMethod(TestFactoryTestDescriptor.java:95)
+	at org.junit.jupiter.engine.descriptor.TestMethodTestDescriptor.execute(TestMethodTestDescriptor.java:138)
+	at org.junit.jupiter.engine.descriptor.TestMethodTestDescriptor.execute(TestMethodTestDescriptor.java:68)
+	at org.junit.platform.engine.support.hierarchical.NodeTestTask.lambda$executeRecursively$6(NodeTestTask.java:151)
+	at org.junit.platform.engine.support.hierarchical.ThrowableCollector.execute(ThrowableCollector.java:73)
+	at org.junit.platform.engine.support.hierarchical.NodeTestTask.lambda$executeRecursively$8(NodeTestTask.java:141)
+	at org.junit.platform.engine.support.hierarchical.Node.around(Node.java:137)
+	at org.junit.platform.engine.support.hierarchical.NodeTestTask.lambda$executeRecursively$9(NodeTestTask.java:139)
+	at org.junit.platform.engine.support.hierarchical.ThrowableCollector.execute(ThrowableCollector.java:73)
+	at org.junit.platform.engine.support.hierarchical.NodeTestTask.executeRecursively(NodeTestTask.java:138)
+	at org.junit.platform.engine.support.hierarchical.NodeTestTask.execute(NodeTestTask.java:95)
+	at java.base/java.util.ArrayList.forEach(ArrayList.java:1596)
+	at org.junit.platform.engine.support.hierarchical.SameThreadHierarchicalTestExecutorService.invokeAll(SameThreadHierarchicalTestExecutorService.java:41)
+	at org.junit.platform.engine.support.hierarchical.NodeTestTask.lambda$executeRecursively$6(NodeTestTask.java:155)
+	at org.junit.platform.engine.support.hierarchical.ThrowableCollector.execute(ThrowableCollector.java:73)
+	at org.junit.platform.engine.support.hierarchical.NodeTestTask.lambda$executeRecursively$8(NodeTestTask.java:141)
+	at org.junit.platform.engine.support.hierarchical.Node.around(Node.java:137)
+	at org.junit.platform.engine.support.hierarchical.NodeTestTask.lambda$executeRecursively$9(NodeTestTask.java:139)
+	at org.junit.platform.engine.support.hierarchical.ThrowableCollector.execute(ThrowableCollector.java:73)
+	at org.junit.platform.engine.support.hierarchical.NodeTestTask.executeRecursively(NodeTestTask.java:138)
+	at org.junit.platform.engine.support.hierarchical.NodeTestTask.execute(NodeTestTask.java:95)
+	at java.base/java.util.ArrayList.forEach(ArrayList.java:1596)
+	at org.junit.platform.engine.support.hierarchical.SameThreadHierarchicalTestExecutorService.invokeAll(SameThreadHierarchicalTestExecutorService.java:41)
+	at org.junit.platform.engine.support.hierarchical.NodeTestTask.lambda$executeRecursively$6(NodeTestTask.java:155)
+	at org.junit.platform.engine.support.hierarchical.ThrowableCollector.execute(ThrowableCollector.java:73)
+	at org.junit.platform.engine.support.hierarchical.NodeTestTask.lambda$executeRecursively$8(NodeTestTask.java:141)
+	at org.junit.platform.engine.support.hierarchical.Node.around(Node.java:137)
+	at org.junit.platform.engine.support.hierarchical.NodeTestTask.lambda$executeRecursively$9(NodeTestTask.java:139)
+	at org.junit.platform.engine.support.hierarchical.ThrowableCollector.execute(ThrowableCollector.java:73)
+	at org.junit.platform.engine.support.hierarchical.NodeTestTask.executeRecursively(NodeTestTask.java:138)
+	at org.junit.platform.engine.support.hierarchical.NodeTestTask.execute(NodeTestTask.java:95)
+	at org.junit.platform.engine.support.hierarchical.SameThreadHierarchicalTestExecutorService.submit(SameThreadHierarchicalTestExecutorService.java:35)
+	at org.junit.platform.engine.support.hierarchical.HierarchicalTestExecutor.execute(HierarchicalTestExecutor.java:57)
+	at org.junit.platform.engine.support.hierarchical.HierarchicalTestEngine.execute(HierarchicalTestEngine.java:54)
+	at org.junit.platform.launcher.core.EngineExecutionOrchestrator.execute(EngineExecutionOrchestrator.java:147)
+	at org.junit.platform.launcher.core.EngineExecutionOrchestrator.execute(EngineExecutionOrchestrator.java:127)
+	at org.junit.platform.launcher.core.EngineExecutionOrchestrator.execute(EngineExecutionOrchestrator.java:90)
+	at org.junit.platform.launcher.core.EngineExecutionOrchestrator.lambda$execute$0(EngineExecutionOrchestrator.java:55)
+	at org.junit.platform.launcher.core.EngineExecutionOrchestrator.withInterceptedStreams(EngineExecutionOrchestrator.java:102)
+	at org.junit.platform.launcher.core.EngineExecutionOrchestrator.execute(EngineExecutionOrchestrator.java:54)
+	at org.junit.platform.launcher.core.DefaultLauncher.execute(DefaultLauncher.java:114)
+	at org.junit.platform.launcher.core.DefaultLauncher.execute(DefaultLauncher.java:86)
+	at org.junit.platform.launcher.core.DefaultLauncherSession$DelegatingLauncher.execute(DefaultLauncherSession.java:86)
+	at org.apache.maven.surefire.junitplatform.LazyLauncher.execute(LazyLauncher.java:56)
+	at org.apache.maven.surefire.junitplatform.JUnitPlatformProvider.execute(JUnitPlatformProvider.java:184)
+	at org.apache.maven.surefire.junitplatform.JUnitPlatformProvider.invokeAllTests(JUnitPlatformProvider.java:148)
+	at org.apache.maven.surefire.junitplatform.JUnitPlatformProvider.invoke(JUnitPlatformProvider.java:122)
+	at org.apache.maven.surefire.booter.ForkedBooter.runSuitesInProcess(ForkedBooter.java:385)
+	at org.apache.maven.surefire.booter.ForkedBooter.execute(ForkedBooter.java:162)
+	at org.apache.maven.surefire.booter.ForkedBooter.run(ForkedBooter.java:507)
+	at org.apache.maven.surefire.booter.ForkedBooter.main(ForkedBooter.java:495)
+]]></failure>
+    <system-out><![CDATA[08:50:35.050 [main] INFO  com.intuit.karate - karate.env system property was: null 
+08:50:35.056 [main] DEBUG com.intuit.karate - request:
+1 > POST https://dev-core-service.innova.com/api/dlc-locations
+1 > Content-Type: application/json; charset=UTF-8
+1 > Accept: application/json
+1 > api-key: EJPLzfSyCmdDSUzhG9LJwt3MCgTrAN
+1 > Content-Length: 46
+1 > Host: dev-core-service.innova.com
+1 > Connection: Keep-Alive
+1 > User-Agent: Apache-HttpClient/4.5.14 (Java/21.0.3)
+1 > Accept-Encoding: gzip,deflate
+{"Language":"en-us","Vin":"JM1DRACB*N1******"}
+
+08:50:35.901 [main] DEBUG com.intuit.karate - response time in milliseconds: 843
+1 < 200
+1 < Transfer-Encoding: chunked
+1 < Content-Type: application/json; charset=utf-8
+1 < Server: Microsoft-IIS/10.0
+1 < X-Powered-By: ASP.NET
+1 < Date: Tue, 30 Sep 2025 08:50:35 GMT
+{"TraceId":"6d58c9d139806e9d7b4aeaf1b8d6eb12","Ok":true,"Message":null,"Data":[{"Year":"2022","Make":"MAZDA","Model":"MX-30","LocationNumber":2,"Access":"uncovered","Comments":"Driver Side - Under Lower Left Side of Dashboard","ImageFileName":"","ImageFileUrl":"https://secure-downloads.innova.com/dlc-location-images-wm/?Expires=1759222535&Signature=AlYBSFeL~7lCiiWijjhwfw9rZKCHCde5-J3BxTDhdjozRCz3WtO4-KyEe9vHFGlRGepm2XdpIRRSWP8OS0NxPi6BmxCntKmDYfxMGLQckDA1XG8sjWo4LvVtOq18ND3WWDUhcJFDB461R6Bj3ijf9jldCf7ooFwN-cKLhc87J1DPG34KnJYSNYhlh-w-nLpy4FKo99GXlwYMKXReiYxVBeDAA6sP1ab5ImGN9VfYgFbzMbiIMxn8GtuZ5u97eqlz4t4DRsYpzmv3haGdyRe3GxGQWEci~cnhSQqkpuUTjNwmIAuFtQIptbw0sU1lnN2mzZHkXxp9xYl6gOFQrUfceQ__&Key-Pair-Id=APKAJVI4C2YLKAQ7KO6A","ImageFileUrlSmall":"https://secure-downloads.innova.com/dlc-location-images-wm/?Expires=1759222535&Signature=AlYBSFeL~7lCiiWijjhwfw9rZKCHCde5-J3BxTDhdjozRCz3WtO4-KyEe9vHFGlRGepm2XdpIRRSWP8OS0NxPi6BmxCntKmDYfxMGLQckDA1XG8sjWo4LvVtOq18ND3WWDUhcJFDB461R6Bj3ijf9jldCf7ooFwN-cKLhc87J1DPG34KnJYSNYhlh-w-nLpy4FKo99GXlwYMKXReiYxVBeDAA6sP1ab5ImGN9VfYgFbzMbiIMxn8GtuZ5u97eqlz4t4DRsYpzmv3haGdyRe3GxGQWEci~cnhSQqkpuUTjNwmIAuFtQIptbw0sU1lnN2mzZHkXxp9xYl6gOFQrUfceQ__&Key-Pair-Id=APKAJVI4C2YLKAQ7KO6A"}]}
+
+08:50:35.933 [main] ERROR com.intuit.karate - classpath:resources/apis/dlc-locations/dlc-locations-by-vin.feature:46
+And match response.Data[0].ImageFileUrl == '#? _ == null || _ == ""'
+match failed: EQUALS
+  $ | evaluated to 'false' (STRING:STRING)
+  'https://secure-downloads.innova.com/dlc-location-images-wm/?Expires=1759222535&Signature=AlYBSFeL~7lCiiWijjhwfw9rZKCHCde5-J3BxTDhdjozRCz3WtO4-KyEe9vHFGlRGepm2XdpIRRSWP8OS0NxPi6BmxCntKmDYfxMGLQckDA1XG8sjWo4LvVtOq18ND3WWDUhcJFDB461R6Bj3ijf9jldCf7ooFwN-cKLhc87J1DPG34KnJYSNYhlh-w-nLpy4FKo99GXlwYMKXReiYxVBeDAA6sP1ab5ImGN9VfYgFbzMbiIMxn8GtuZ5u97eqlz4t4DRsYpzmv3haGdyRe3GxGQWEci~cnhSQqkpuUTjNwmIAuFtQIptbw0sU1lnN2mzZHkXxp9xYl6gOFQrUfceQ__&Key-Pair-Id=APKAJVI4C2YLKAQ7KO6A'
+  '#? _ == null || _ == ""'
+
+classpath:resources/apis/dlc-locations/dlc-locations-by-vin.feature:46
+]]></system-out>
+  </testcase>
+  <testcase name="[3:49] Check DLC Location Info and Image URLs cannot null by VIN: 4T4BF1FK1FR513668" classname="resources/apis/dlc-locations/dlc-locations-by-vin" time="0.782">
+    <system-out><![CDATA[08:50:35.964 [main] INFO  com.intuit.karate - karate.env system property was: null 
+08:50:35.970 [main] DEBUG com.intuit.karate - request:
+1 > POST https://dev-core-service.innova.com/api/dlc-locations
+1 > Content-Type: application/json; charset=UTF-8
+1 > Accept: application/json
+1 > api-key: EJPLzfSyCmdDSUzhG9LJwt3MCgTrAN
+1 > Content-Length: 46
+1 > Host: dev-core-service.innova.com
+1 > Connection: Keep-Alive
+1 > User-Agent: Apache-HttpClient/4.5.14 (Java/21.0.3)
+1 > Accept-Encoding: gzip,deflate
+{"Language":"en-us","Vin":"4T4BF1FK1FR513668"}
+
+08:50:36.722 [main] DEBUG com.intuit.karate - response time in milliseconds: 750
+1 < 200
+1 < Transfer-Encoding: chunked
+1 < Content-Type: application/json; charset=utf-8
+1 < Server: Microsoft-IIS/10.0
+1 < X-Powered-By: ASP.NET
+1 < Date: Tue, 30 Sep 2025 08:50:35 GMT
+{"TraceId":"dfe8a77e0d0e01d147c05592c43e5c99","Ok":true,"Message":null,"Data":[{"Year":"2015","Make":"Toyota","Model":"Camry","LocationNumber":2,"Access":"uncovered ","Comments":"Driver Side - Under Lower Left Side of Dashboard","ImageFileName":"camry-5\tC","ImageFileUrl":"https://secure-downloads.innova.com/dlc-location-images-wm/toyota/camry/camry-5\tc.jpg?Expires=1759222536&Signature=nluiPYNyiYwFpcJUGSIXCNObgqgPYPf1HTJbJjgrX~V34xoSbLEmA0MpOegy-q2tc7j-~~BvnWLpOh3h5Yq4tCENtag-HQIPqTSddL2uQm0WJl~N-SMY1iG8GdH4g3SQCcU~Uuy6ZzGamlkWgeUdzoZa7xQ5ZtlHVntLmQzhCKPwuD3Kl2pDuqh0kV~Vdb1XpUdCXSdUBlDoGR1G-N3SSajI26owvqqN3fuKWjjHI3-ez~RC0t9H7YW4FpzYjw9QBudZ1AqabHsJAn3B3u-hSJjmMPzxA1hy-2SuW2E3n~xw2X9AgFpJNVOhMUzrkpy2l6UBwSvppIhUccgUbpahdA__&Key-Pair-Id=APKAJVI4C2YLKAQ7KO6A","ImageFileUrlSmall":"https://secure-downloads.innova.com/dlc-location-images-wm/toyota/camry/camry-5\tc-sm.jpg?Expires=1759222536&Signature=rsvKioJrGbavIbtm4FscQGvhX6R0PeQtST5zOhbLK5un5qjnRayL4fxt042Kj8PaVTiuNXTjZ8xV7pnxchqh14jRsMn01ODruxBn53B3m0RZqSOc4k1QEdAmuy8GdHX7kpa-~kSsWm-wVHlbAm1a-0jUQPrOroPC35DF0ngO9O7Ukd4fyL-EJkm-viAQC95PYdC8y-dTwBlrOxzd3rDi2qzeZaoWKfrxjacEqkoQ~FISBZD6mfyWLC26Q3w-fUxMVKAufA3OoZv7xvJJDfD74cyYt6vE-qpi3eVrOrnJVEnjufX3bnlupuMVTUckIMY4HvZd6H4AzKyDPGd37Rmp3Q__&Key-Pair-Id=APKAJVI4C2YLKAQ7KO6A"}]}
+
+]]></system-out>
+  </testcase>
+  <testcase name="[4:70] Check DLC Location Info and Image URLs can not null by VIN: 2CNDL73F976028975" classname="resources/apis/dlc-locations/dlc-locations-by-vin" time="0.758">
+    <system-out><![CDATA[08:50:36.756 [main] INFO  com.intuit.karate - karate.env system property was: null 
+08:50:36.762 [main] DEBUG com.intuit.karate - request:
+1 > POST https://dev-core-service.innova.com/api/dlc-locations
+1 > Content-Type: application/json; charset=UTF-8
+1 > Accept: application/json
+1 > api-key: EJPLzfSyCmdDSUzhG9LJwt3MCgTrAN
+1 > Content-Length: 46
+1 > Host: dev-core-service.innova.com
+1 > Connection: Keep-Alive
+1 > User-Agent: Apache-HttpClient/4.5.14 (Java/21.0.3)
+1 > Accept-Encoding: gzip,deflate
+{"Language":"en-us","Vin":"2CNDL73F976028975"}
+
+08:50:37.502 [main] DEBUG com.intuit.karate - response time in milliseconds: 739
+1 < 200
+1 < Transfer-Encoding: chunked
+1 < Content-Type: application/json; charset=utf-8
+1 < Server: Microsoft-IIS/10.0
+1 < X-Powered-By: ASP.NET
+1 < Date: Tue, 30 Sep 2025 08:50:37 GMT
+{"TraceId":"ebcaaa7090f0e0064fc3b182c1ee859e","Ok":true,"Message":null,"Data":[{"Year":"2007","Make":"Chevrolet","Model":"Equinox","LocationNumber":2,"Access":"uncovered ","Comments":"Driver Side - Under Lower Left Side of Dashboard","ImageFileName":"equinox-1","ImageFileUrl":"https://secure-downloads.innova.com/dlc-location-images-wm/chevrolet/equinox/equinox-1.jpg?Expires=1759222537&Signature=NEbtSuqMwwbGfZyFGQFwY1uZ4KzzRj9iTEyHt8IuauOZpxGO3agWUQJB-cVo~HGLdWDTzRPZGea0u1zhAMEG7mlbAz0nTXk2KBFYwWL~dPCUYyFp6t84904XpRtXOCqENWn8Gr6lu9Xc-50gK-sxDT72ArImqZZywn4ygIcmf57fun4lMOQb5nA--GqbFxJWR9pMtf1LswagJLWquabGhXG-v~YXwOAGfmTZfc6olL~XK1inSQkDo4SuXbSFYJvB4KqBwZMA7eLiECODLMVnPeZ4CobwRxfbv9pRiewzGhOix2NTQr894RXWRMeC0~DPJdF0CUoAfcTLisWrwAp8sw__&Key-Pair-Id=APKAJVI4C2YLKAQ7KO6A","ImageFileUrlSmall":"https://secure-downloads.innova.com/dlc-location-images-wm/chevrolet/equinox/equinox-1-sm.jpg?Expires=1759222537&Signature=YH-CxQXH2TCbqIMHzWXe5LcDQ0iMcj6ziVhHmB0WQFs~6nsBrED2-5n2TecjMAkWZ7grq4eZt2uZVoIYWJD0txQg4YewyDRRN35NYbnkKt6WfLgPHhgrvCBc5gLO~FYvpv80R6ZPs0UcPDFHR4vb2nIU1EQa2QRTJuhG9nh5M39FSIIVORkr70LH0Tw77la6ZIFry~YohPqxFrCHayZT2zVhtZb1x9X4zIbS5Wo-63YOlMHvuEi5~Sp7kPN0VqzGBrg2dSC10q-8nH2te-Lnt5VZ2K~lPyrcepN489pdG8AkUhb~rFTzEZykHHE6yxL-B8Qcg7cPQV7NVBVr5PiI2A__&Key-Pair-Id=APKAJVI4C2YLKAQ7KO6A"}]}
+
+]]></system-out>
+  </testcase>
+  <testcase name="[5:91] Check DLC Location Info and Image URLs can not null with VIN: JM1DRACB*N1****** and es-mx Language" classname="resources/apis/dlc-locations/dlc-locations-by-vin" time="1.896">
+    <failure message="match failed: EQUALS&#10;  $ | evaluated to &apos;false&apos; (STRING:STRING)&#10;  &apos;https://secure-downloads.innova.com/dlc-location-images-wm/?Expires=1759222538&amp;Signature=eWjBhqPmRiBPldqcNWMASYdaXE-HwxT2Nl~PHYTq4aywbNDBlRfLyMeelQfLG-gwbI-e6ZpXCKjURPloUgijNoIcInnBsHkc5o9GcJdPC2oI6WediAChu7bNPc7FlnRNhjbOR73Zsxuvdy2~VC6q2m9arnj7uJET4LNhAkgOXU0u-BxOthB8E926k21Wz6nLwLjx1OhRHr5d9Y2mrWJ5-A5FaqdbXXBqY2S7ftMvcfFFd9eK3vzda0HTNeQ6Fw1eJPNPNvUdHRPrk0W3YCLalZscv8dncu9t2kvABM8930oSItisdB~lHTRq5ATX3INeZnKS6IusZv6TvVBlFR8egg__&amp;Key-Pair-Id=APKAJVI4C2YLKAQ7KO6A&apos;&#10;  &apos;#? _ == null || _ == &quot;&quot;&apos;&#10;&#10;classpath:resources/apis/dlc-locations/dlc-locations-by-vin.feature:109" type="org.opentest4j.AssertionFailedError"><![CDATA[org.opentest4j.AssertionFailedError: 
+match failed: EQUALS
+  $ | evaluated to 'false' (STRING:STRING)
+  'https://secure-downloads.innova.com/dlc-location-images-wm/?Expires=1759222538&Signature=eWjBhqPmRiBPldqcNWMASYdaXE-HwxT2Nl~PHYTq4aywbNDBlRfLyMeelQfLG-gwbI-e6ZpXCKjURPloUgijNoIcInnBsHkc5o9GcJdPC2oI6WediAChu7bNPc7FlnRNhjbOR73Zsxuvdy2~VC6q2m9arnj7uJET4LNhAkgOXU0u-BxOthB8E926k21Wz6nLwLjx1OhRHr5d9Y2mrWJ5-A5FaqdbXXBqY2S7ftMvcfFFd9eK3vzda0HTNeQ6Fw1eJPNPNvUdHRPrk0W3YCLalZscv8dncu9t2kvABM8930oSItisdB~lHTRq5ATX3INeZnKS6IusZv6TvVBlFR8egg__&Key-Pair-Id=APKAJVI4C2YLKAQ7KO6A'
+  '#? _ == null || _ == ""'
+
+classpath:resources/apis/dlc-locations/dlc-locations-by-vin.feature:109
+	at org.junit.jupiter.api.AssertionUtils.fail(AssertionUtils.java:38)
+	at org.junit.jupiter.api.Assertions.fail(Assertions.java:135)
+	at com.intuit.karate.junit5.FeatureNode.lambda$next$1(FeatureNode.java:86)
+	at org.junit.jupiter.engine.descriptor.DynamicTestTestDescriptor.lambda$execute$0(DynamicTestTestDescriptor.java:53)
+	at org.junit.jupiter.engine.execution.InvocationInterceptorChain$ValidatingInvocation.proceed(InvocationInterceptorChain.java:131)
+	at org.junit.jupiter.api.extension.InvocationInterceptor.interceptDynamicTest(InvocationInterceptor.java:167)
+	at org.junit.jupiter.api.extension.InvocationInterceptor.interceptDynamicTest(InvocationInterceptor.java:184)
+	at org.junit.jupiter.engine.descriptor.DynamicTestTestDescriptor.lambda$execute$1(DynamicTestTestDescriptor.java:61)
+	at org.junit.jupiter.engine.execution.InvocationInterceptorChain$InterceptorCall.lambda$ofVoid$0(InvocationInterceptorChain.java:78)
+	at org.junit.jupiter.engine.execution.InvocationInterceptorChain$InterceptedInvocation.proceed(InvocationInterceptorChain.java:106)
+	at org.junit.jupiter.engine.execution.InvocationInterceptorChain.proceed(InvocationInterceptorChain.java:64)
+	at org.junit.jupiter.engine.execution.InvocationInterceptorChain.chainAndInvoke(InvocationInterceptorChain.java:45)
+	at org.junit.jupiter.engine.execution.InvocationInterceptorChain.invoke(InvocationInterceptorChain.java:37)
+	at org.junit.jupiter.engine.descriptor.DynamicTestTestDescriptor.execute(DynamicTestTestDescriptor.java:60)
+	at org.junit.jupiter.engine.descriptor.DynamicTestTestDescriptor.execute(DynamicTestTestDescriptor.java:32)
+	at org.junit.platform.engine.support.hierarchical.NodeTestTask.lambda$executeRecursively$6(NodeTestTask.java:151)
+	at org.junit.platform.engine.support.hierarchical.ThrowableCollector.execute(ThrowableCollector.java:73)
+	at org.junit.platform.engine.support.hierarchical.NodeTestTask.lambda$executeRecursively$8(NodeTestTask.java:141)
+	at org.junit.platform.engine.support.hierarchical.Node.around(Node.java:137)
+	at org.junit.platform.engine.support.hierarchical.NodeTestTask.lambda$executeRecursively$9(NodeTestTask.java:139)
+	at org.junit.platform.engine.support.hierarchical.ThrowableCollector.execute(ThrowableCollector.java:73)
+	at org.junit.platform.engine.support.hierarchical.NodeTestTask.executeRecursively(NodeTestTask.java:138)
+	at org.junit.platform.engine.support.hierarchical.NodeTestTask.execute(NodeTestTask.java:95)
+	at org.junit.platform.engine.support.hierarchical.SameThreadHierarchicalTestExecutorService.submit(SameThreadHierarchicalTestExecutorService.java:35)
+	at org.junit.platform.engine.support.hierarchical.NodeTestTask$DefaultDynamicTestExecutor.execute(NodeTestTask.java:226)
+	at org.junit.platform.engine.support.hierarchical.NodeTestTask$DefaultDynamicTestExecutor.execute(NodeTestTask.java:204)
+	at java.base/java.util.stream.ForEachOps$ForEachOp$OfRef.accept(ForEachOps.java:184)
+	at java.base/java.util.stream.ReferencePipeline$3$1.accept(ReferencePipeline.java:197)
+	at java.base/java.util.stream.ReferencePipeline$2$1.accept(ReferencePipeline.java:179)
+	at java.base/java.util.stream.ReferencePipeline$3$1.accept(ReferencePipeline.java:197)
+	at java.base/java.util.Iterator.forEachRemaining(Iterator.java:133)
+	at java.base/java.util.Spliterators$IteratorSpliterator.forEachRemaining(Spliterators.java:1939)
+	at java.base/java.util.stream.AbstractPipeline.copyInto(AbstractPipeline.java:509)
+	at java.base/java.util.stream.AbstractPipeline.wrapAndCopyInto(AbstractPipeline.java:499)
+	at java.base/java.util.stream.ForEachOps$ForEachOp.evaluateSequential(ForEachOps.java:151)
+	at java.base/java.util.stream.ForEachOps$ForEachOp$OfRef.evaluateSequential(ForEachOps.java:174)
+	at java.base/java.util.stream.AbstractPipeline.evaluate(AbstractPipeline.java:234)
+	at java.base/java.util.stream.ReferencePipeline.forEachOrdered(ReferencePipeline.java:601)
+	at org.junit.jupiter.engine.descriptor.DynamicContainerTestDescriptor.execute(DynamicContainerTestDescriptor.java:67)
+	at org.junit.jupiter.engine.descriptor.DynamicContainerTestDescriptor.execute(DynamicContainerTestDescriptor.java:33)
+	at org.junit.platform.engine.support.hierarchical.NodeTestTask.lambda$executeRecursively$6(NodeTestTask.java:151)
+	at org.junit.platform.engine.support.hierarchical.ThrowableCollector.execute(ThrowableCollector.java:73)
+	at org.junit.platform.engine.support.hierarchical.NodeTestTask.lambda$executeRecursively$8(NodeTestTask.java:141)
+	at org.junit.platform.engine.support.hierarchical.Node.around(Node.java:137)
+	at org.junit.platform.engine.support.hierarchical.NodeTestTask.lambda$executeRecursively$9(NodeTestTask.java:139)
+	at org.junit.platform.engine.support.hierarchical.ThrowableCollector.execute(ThrowableCollector.java:73)
+	at org.junit.platform.engine.support.hierarchical.NodeTestTask.executeRecursively(NodeTestTask.java:138)
+	at org.junit.platform.engine.support.hierarchical.NodeTestTask.execute(NodeTestTask.java:95)
+	at org.junit.platform.engine.support.hierarchical.SameThreadHierarchicalTestExecutorService.submit(SameThreadHierarchicalTestExecutorService.java:35)
+	at org.junit.platform.engine.support.hierarchical.NodeTestTask$DefaultDynamicTestExecutor.execute(NodeTestTask.java:226)
+	at org.junit.platform.engine.support.hierarchical.NodeTestTask$DefaultDynamicTestExecutor.execute(NodeTestTask.java:204)
+	at java.base/java.util.Optional.ifPresent(Optional.java:178)
+	at org.junit.jupiter.engine.descriptor.TestFactoryTestDescriptor.lambda$invokeTestMethod$1(TestFactoryTestDescriptor.java:108)
+	at org.junit.platform.engine.support.hierarchical.ThrowableCollector.execute(ThrowableCollector.java:73)
+	at org.junit.jupiter.engine.descriptor.TestFactoryTestDescriptor.invokeTestMethod(TestFactoryTestDescriptor.java:95)
+	at org.junit.jupiter.engine.descriptor.TestMethodTestDescriptor.execute(TestMethodTestDescriptor.java:138)
+	at org.junit.jupiter.engine.descriptor.TestMethodTestDescriptor.execute(TestMethodTestDescriptor.java:68)
+	at org.junit.platform.engine.support.hierarchical.NodeTestTask.lambda$executeRecursively$6(NodeTestTask.java:151)
+	at org.junit.platform.engine.support.hierarchical.ThrowableCollector.execute(ThrowableCollector.java:73)
+	at org.junit.platform.engine.support.hierarchical.NodeTestTask.lambda$executeRecursively$8(NodeTestTask.java:141)
+	at org.junit.platform.engine.support.hierarchical.Node.around(Node.java:137)
+	at org.junit.platform.engine.support.hierarchical.NodeTestTask.lambda$executeRecursively$9(NodeTestTask.java:139)
+	at org.junit.platform.engine.support.hierarchical.ThrowableCollector.execute(ThrowableCollector.java:73)
+	at org.junit.platform.engine.support.hierarchical.NodeTestTask.executeRecursively(NodeTestTask.java:138)
+	at org.junit.platform.engine.support.hierarchical.NodeTestTask.execute(NodeTestTask.java:95)
+	at java.base/java.util.ArrayList.forEach(ArrayList.java:1596)
+	at org.junit.platform.engine.support.hierarchical.SameThreadHierarchicalTestExecutorService.invokeAll(SameThreadHierarchicalTestExecutorService.java:41)
+	at org.junit.platform.engine.support.hierarchical.NodeTestTask.lambda$executeRecursively$6(NodeTestTask.java:155)
+	at org.junit.platform.engine.support.hierarchical.ThrowableCollector.execute(ThrowableCollector.java:73)
+	at org.junit.platform.engine.support.hierarchical.NodeTestTask.lambda$executeRecursively$8(NodeTestTask.java:141)
+	at org.junit.platform.engine.support.hierarchical.Node.around(Node.java:137)
+	at org.junit.platform.engine.support.hierarchical.NodeTestTask.lambda$executeRecursively$9(NodeTestTask.java:139)
+	at org.junit.platform.engine.support.hierarchical.ThrowableCollector.execute(ThrowableCollector.java:73)
+	at org.junit.platform.engine.support.hierarchical.NodeTestTask.executeRecursively(NodeTestTask.java:138)
+	at org.junit.platform.engine.support.hierarchical.NodeTestTask.execute(NodeTestTask.java:95)
+	at java.base/java.util.ArrayList.forEach(ArrayList.java:1596)
+	at org.junit.platform.engine.support.hierarchical.SameThreadHierarchicalTestExecutorService.invokeAll(SameThreadHierarchicalTestExecutorService.java:41)
+	at org.junit.platform.engine.support.hierarchical.NodeTestTask.lambda$executeRecursively$6(NodeTestTask.java:155)
+	at org.junit.platform.engine.support.hierarchical.ThrowableCollector.execute(ThrowableCollector.java:73)
+	at org.junit.platform.engine.support.hierarchical.NodeTestTask.lambda$executeRecursively$8(NodeTestTask.java:141)
+	at org.junit.platform.engine.support.hierarchical.Node.around(Node.java:137)
+	at org.junit.platform.engine.support.hierarchical.NodeTestTask.lambda$executeRecursively$9(NodeTestTask.java:139)
+	at org.junit.platform.engine.support.hierarchical.ThrowableCollector.execute(ThrowableCollector.java:73)
+	at org.junit.platform.engine.support.hierarchical.NodeTestTask.executeRecursively(NodeTestTask.java:138)
+	at org.junit.platform.engine.support.hierarchical.NodeTestTask.execute(NodeTestTask.java:95)
+	at org.junit.platform.engine.support.hierarchical.SameThreadHierarchicalTestExecutorService.submit(SameThreadHierarchicalTestExecutorService.java:35)
+	at org.junit.platform.engine.support.hierarchical.HierarchicalTestExecutor.execute(HierarchicalTestExecutor.java:57)
+	at org.junit.platform.engine.support.hierarchical.HierarchicalTestEngine.execute(HierarchicalTestEngine.java:54)
+	at org.junit.platform.launcher.core.EngineExecutionOrchestrator.execute(EngineExecutionOrchestrator.java:147)
+	at org.junit.platform.launcher.core.EngineExecutionOrchestrator.execute(EngineExecutionOrchestrator.java:127)
+	at org.junit.platform.launcher.core.EngineExecutionOrchestrator.execute(EngineExecutionOrchestrator.java:90)
+	at org.junit.platform.launcher.core.EngineExecutionOrchestrator.lambda$execute$0(EngineExecutionOrchestrator.java:55)
+	at org.junit.platform.launcher.core.EngineExecutionOrchestrator.withInterceptedStreams(EngineExecutionOrchestrator.java:102)
+	at org.junit.platform.launcher.core.EngineExecutionOrchestrator.execute(EngineExecutionOrchestrator.java:54)
+	at org.junit.platform.launcher.core.DefaultLauncher.execute(DefaultLauncher.java:114)
+	at org.junit.platform.launcher.core.DefaultLauncher.execute(DefaultLauncher.java:86)
+	at org.junit.platform.launcher.core.DefaultLauncherSession$DelegatingLauncher.execute(DefaultLauncherSession.java:86)
+	at org.apache.maven.surefire.junitplatform.LazyLauncher.execute(LazyLauncher.java:56)
+	at org.apache.maven.surefire.junitplatform.JUnitPlatformProvider.execute(JUnitPlatformProvider.java:184)
+	at org.apache.maven.surefire.junitplatform.JUnitPlatformProvider.invokeAllTests(JUnitPlatformProvider.java:148)
+	at org.apache.maven.surefire.junitplatform.JUnitPlatformProvider.invoke(JUnitPlatformProvider.java:122)
+	at org.apache.maven.surefire.booter.ForkedBooter.runSuitesInProcess(ForkedBooter.java:385)
+	at org.apache.maven.surefire.booter.ForkedBooter.execute(ForkedBooter.java:162)
+	at org.apache.maven.surefire.booter.ForkedBooter.run(ForkedBooter.java:507)
+	at org.apache.maven.surefire.booter.ForkedBooter.main(ForkedBooter.java:495)
+]]></failure>
+    <system-out><![CDATA[08:50:37.526 [main] INFO  com.intuit.karate - karate.env system property was: null 
+08:50:37.529 [main] DEBUG com.intuit.karate - request:
+1 > POST https://dev-core-service.innova.com/api/dlc-locations
+1 > Content-Type: application/json; charset=UTF-8
+1 > Accept: application/json
+1 > api-key: EJPLzfSyCmdDSUzhG9LJwt3MCgTrAN
+1 > Content-Length: 46
+1 > Host: dev-core-service.innova.com
+1 > Connection: Keep-Alive
+1 > User-Agent: Apache-HttpClient/4.5.14 (Java/21.0.3)
+1 > Accept-Encoding: gzip,deflate
+{"Language":"es-mx","Vin":"JM1DRACB*N1******"}
+
+08:50:38.320 [main] DEBUG com.intuit.karate - response time in milliseconds: 791
+1 < 200
+1 < Transfer-Encoding: chunked
+1 < Content-Type: application/json; charset=utf-8
+1 < Server: Microsoft-IIS/10.0
+1 < X-Powered-By: ASP.NET
+1 < Date: Tue, 30 Sep 2025 08:50:37 GMT
+{"TraceId":"7ff26c5e6fb86ab1d06c0c21bcb0cb94","Ok":true,"Message":null,"Data":[{"Year":"2022","Make":"MAZDA","Model":"MX-30","LocationNumber":2,"Access":"descubierto","Comments":"Del lado del conductor - En la parte inferior izquierda del panel","ImageFileName":"","ImageFileUrl":"https://secure-downloads.innova.com/dlc-location-images-wm/?Expires=1759222538&Signature=eWjBhqPmRiBPldqcNWMASYdaXE-HwxT2Nl~PHYTq4aywbNDBlRfLyMeelQfLG-gwbI-e6ZpXCKjURPloUgijNoIcInnBsHkc5o9GcJdPC2oI6WediAChu7bNPc7FlnRNhjbOR73Zsxuvdy2~VC6q2m9arnj7uJET4LNhAkgOXU0u-BxOthB8E926k21Wz6nLwLjx1OhRHr5d9Y2mrWJ5-A5FaqdbXXBqY2S7ftMvcfFFd9eK3vzda0HTNeQ6Fw1eJPNPNvUdHRPrk0W3YCLalZscv8dncu9t2kvABM8930oSItisdB~lHTRq5ATX3INeZnKS6IusZv6TvVBlFR8egg__&Key-Pair-Id=APKAJVI4C2YLKAQ7KO6A","ImageFileUrlSmall":"https://secure-downloads.innova.com/dlc-location-images-wm/?Expires=1759222538&Signature=eWjBhqPmRiBPldqcNWMASYdaXE-HwxT2Nl~PHYTq4aywbNDBlRfLyMeelQfLG-gwbI-e6ZpXCKjURPloUgijNoIcInnBsHkc5o9GcJdPC2oI6WediAChu7bNPc7FlnRNhjbOR73Zsxuvdy2~VC6q2m9arnj7uJET4LNhAkgOXU0u-BxOthB8E926k21Wz6nLwLjx1OhRHr5d9Y2mrWJ5-A5FaqdbXXBqY2S7ftMvcfFFd9eK3vzda0HTNeQ6Fw1eJPNPNvUdHRPrk0W3YCLalZscv8dncu9t2kvABM8930oSItisdB~lHTRq5ATX3INeZnKS6IusZv6TvVBlFR8egg__&Key-Pair-Id=APKAJVI4C2YLKAQ7KO6A"}]}
+
+08:50:38.327 [main] ERROR com.intuit.karate - classpath:resources/apis/dlc-locations/dlc-locations-by-vin.feature:109
+And match response.Data[0].ImageFileUrl == '#? _ == null || _ == ""'
+match failed: EQUALS
+  $ | evaluated to 'false' (STRING:STRING)
+  'https://secure-downloads.innova.com/dlc-location-images-wm/?Expires=1759222538&Signature=eWjBhqPmRiBPldqcNWMASYdaXE-HwxT2Nl~PHYTq4aywbNDBlRfLyMeelQfLG-gwbI-e6ZpXCKjURPloUgijNoIcInnBsHkc5o9GcJdPC2oI6WediAChu7bNPc7FlnRNhjbOR73Zsxuvdy2~VC6q2m9arnj7uJET4LNhAkgOXU0u-BxOthB8E926k21Wz6nLwLjx1OhRHr5d9Y2mrWJ5-A5FaqdbXXBqY2S7ftMvcfFFd9eK3vzda0HTNeQ6Fw1eJPNPNvUdHRPrk0W3YCLalZscv8dncu9t2kvABM8930oSItisdB~lHTRq5ATX3INeZnKS6IusZv6TvVBlFR8egg__&Key-Pair-Id=APKAJVI4C2YLKAQ7KO6A'
+  '#? _ == null || _ == ""'
+
+classpath:resources/apis/dlc-locations/dlc-locations-by-vin.feature:109
+---------------------------------------------------------
+feature: classpath:resources/apis/dlc-locations/dlc-locations-by-vin.feature
+scenarios:  9 | passed:  7 | failed:  2 | time: 9.9341
+---------------------------------------------------------
+
+]]></system-out>
+  </testcase>
+  <testcase name="[1:13] Check available makes for years 2009 and 2015" classname="resources/apis/dlc-locations/available-makes-by-years" time="0.786">
+    <system-out><![CDATA[08:50:39.442 [main] INFO  com.intuit.karate - karate.env system property was: null 
+08:50:39.458 [main] DEBUG com.intuit.karate - request:
+1 > POST https://dev-core-service.innova.com/api/dlc-locations/available-makes-by-years
+1 > Content-Type: application/json; charset=UTF-8
+1 > Accept: application/json
+1 > api-key: EJPLzfSyCmdDSUzhG9LJwt3MCgTrAN
+1 > Content-Length: 21
+1 > Host: dev-core-service.innova.com
+1 > Connection: Keep-Alive
+1 > User-Agent: Apache-HttpClient/4.5.14 (Java/21.0.3)
+1 > Accept-Encoding: gzip,deflate
+{"Years":[2009,2015]}
+
+08:50:40.215 [main] DEBUG com.intuit.karate - response time in milliseconds: 757
+1 < 200
+1 < Transfer-Encoding: chunked
+1 < Content-Type: application/json; charset=utf-8
+1 < Server: Microsoft-IIS/10.0
+1 < X-Powered-By: ASP.NET
+1 < Date: Tue, 30 Sep 2025 08:50:40 GMT
+{"TraceId":"7cdae1463404472d13b5bcb5bdd3827d","Ok":true,"Message":null,"Data":["Acura","Audi","BMW","Buick","Cadillac","Chevrolet","Chrysler","Dodge","Fiat","Ford","Freightliner","GMC","Honda","HUMMER","Hyundai","Infiniti","Jaguar","Jeep","Kia","Land Rover","Lexus","Lincoln","Lotus","Maserati","Maybach","Mazda","Mercedes-Benz","Mercury","MINI","Mitsubishi","Nissan","Pontiac","Porsche","Ram","Rolls-Royce","Saab","Saturn","Scion","Smart","Subaru","Suzuki","Tesla","Toyota","Volkswagen","Volvo"]}
+
+]]></system-out>
+  </testcase>
+  <testcase name="[2:24] Check available makes for year 1995" classname="resources/apis/dlc-locations/available-makes-by-years" time="0.764">
+    <system-out><![CDATA[08:50:40.228 [main] INFO  com.intuit.karate - karate.env system property was: null 
+08:50:40.234 [main] DEBUG com.intuit.karate - request:
+1 > POST https://dev-core-service.innova.com/api/dlc-locations/available-makes-by-years
+1 > Content-Type: application/json; charset=UTF-8
+1 > Accept: application/json
+1 > api-key: EJPLzfSyCmdDSUzhG9LJwt3MCgTrAN
+1 > Content-Length: 16
+1 > Host: dev-core-service.innova.com
+1 > Connection: Keep-Alive
+1 > User-Agent: Apache-HttpClient/4.5.14 (Java/21.0.3)
+1 > Accept-Encoding: gzip,deflate
+{"Years":[1995]}
+
+08:50:40.986 [main] DEBUG com.intuit.karate - response time in milliseconds: 752
+1 < 200
+1 < Transfer-Encoding: chunked
+1 < Content-Type: application/json; charset=utf-8
+1 < Server: Microsoft-IIS/10.0
+1 < X-Powered-By: ASP.NET
+1 < Date: Tue, 30 Sep 2025 08:50:40 GMT
+{"TraceId":"7ba95e839df53ed6a99d3caccee0ef72","Ok":true,"Message":null,"Data":["Ford","Jaguar"]}
+
+]]></system-out>
+  </testcase>
+  <testcase name="[3:35] Check available makes for year 2025" classname="resources/apis/dlc-locations/available-makes-by-years" time="0.936">
+    <system-out><![CDATA[08:50:40.996 [main] INFO  com.intuit.karate - karate.env system property was: null 
+08:50:41.001 [main] DEBUG com.intuit.karate - request:
+1 > POST https://dev-core-service.innova.com/api/dlc-locations/available-makes-by-years
+1 > Content-Type: application/json; charset=UTF-8
+1 > Accept: application/json
+1 > api-key: EJPLzfSyCmdDSUzhG9LJwt3MCgTrAN
+1 > Content-Length: 16
+1 > Host: dev-core-service.innova.com
+1 > Connection: Keep-Alive
+1 > User-Agent: Apache-HttpClient/4.5.14 (Java/21.0.3)
+1 > Accept-Encoding: gzip,deflate
+{"Years":[2025]}
+
+08:50:41.789 [main] DEBUG com.intuit.karate - response time in milliseconds: 787
+1 < 200
+1 < Transfer-Encoding: chunked
+1 < Content-Type: application/json; charset=utf-8
+1 < Server: Microsoft-IIS/10.0
+1 < X-Powered-By: ASP.NET
+1 < Date: Tue, 30 Sep 2025 08:50:41 GMT
+{"TraceId":"ed37342ccde8212af45802db007466fe","Ok":true,"Message":null,"Data":[]}
+
+---------------------------------------------------------
+feature: classpath:resources/apis/dlc-locations/available-makes-by-years.feature
+scenarios:  3 | passed:  3 | failed:  0 | time: 2.3241
+---------------------------------------------------------
+
+]]></system-out>
+  </testcase>
+  <testcase name="[1:12] Check available years for makes Sprinter and Ferrari" classname="resources/apis/dlc-locations/available-years-by-makes" time="0.76">
+    <system-out><![CDATA[08:50:41.943 [main] INFO  com.intuit.karate - karate.env system property was: null 
+08:50:41.952 [main] DEBUG com.intuit.karate - request:
+1 > POST https://dev-core-service.innova.com/api/dlc-locations/available-years-by-makes
+1 > Content-Type: application/json; charset=UTF-8
+1 > Accept: application/json
+1 > api-key: EJPLzfSyCmdDSUzhG9LJwt3MCgTrAN
+1 > Content-Length: 32
+1 > Host: dev-core-service.innova.com
+1 > Connection: Keep-Alive
+1 > User-Agent: Apache-HttpClient/4.5.14 (Java/21.0.3)
+1 > Accept-Encoding: gzip,deflate
+{"Makes":["Sprinter","Ferrari"]}
+
+08:50:42.698 [main] DEBUG com.intuit.karate - response time in milliseconds: 745
+1 < 200
+1 < Transfer-Encoding: chunked
+1 < Content-Type: application/json; charset=utf-8
+1 < Server: Microsoft-IIS/10.0
+1 < X-Powered-By: ASP.NET
+1 < Date: Tue, 30 Sep 2025 08:50:41 GMT
+{"TraceId":"761d523b4cfb9fa943baa5620cb59953","Ok":true,"Message":null,"Data":[2021,2014,2005,2004,2003]}
+
+]]></system-out>
+  </testcase>
+  <testcase name="[2:23] Check available years for make Ford" classname="resources/apis/dlc-locations/available-years-by-makes" time="0.911">
+    <system-out><![CDATA[08:50:42.712 [main] INFO  com.intuit.karate - karate.env system property was: null 
+08:50:42.718 [main] DEBUG com.intuit.karate - request:
+1 > POST https://dev-core-service.innova.com/api/dlc-locations/available-years-by-makes
+1 > Content-Type: application/json; charset=UTF-8
+1 > Accept: application/json
+1 > api-key: EJPLzfSyCmdDSUzhG9LJwt3MCgTrAN
+1 > Content-Length: 18
+1 > Host: dev-core-service.innova.com
+1 > Connection: Keep-Alive
+1 > User-Agent: Apache-HttpClient/4.5.14 (Java/21.0.3)
+1 > Accept-Encoding: gzip,deflate
+{"Makes":["Ford"]}
+
+08:50:43.555 [main] DEBUG com.intuit.karate - response time in milliseconds: 836
+1 < 200
+1 < Transfer-Encoding: chunked
+1 < Content-Type: application/json; charset=utf-8
+1 < Server: Microsoft-IIS/10.0
+1 < X-Powered-By: ASP.NET
+1 < Date: Tue, 30 Sep 2025 08:50:43 GMT
+{"TraceId":"abc00b25010b0434e6b79bd609e0254c","Ok":true,"Message":null,"Data":[2023,2022,2021,2020,2019,2018,2017,2016,2015,2014,2013,2012,2011,2010,2009,2008,2007,2006,2005,2004,2003,2002,2001,2000,1999,1998,1997,1996,1995]}
+
+---------------------------------------------------------
+feature: classpath:resources/apis/dlc-locations/available-years-by-makes.feature
+scenarios:  2 | passed:  2 | failed:  0 | time: 1.5982
+---------------------------------------------------------
+
+]]></system-out>
+  </testcase>
+  <testcase name="[1:12] Check available models for makes Ferrari and Years: 2021, 2014, 2001" classname="resources/apis/dlc-locations/available-models-by-makes-and-years" time="0.742">
+    <system-out><![CDATA[08:50:43.631 [main] INFO  com.intuit.karate - karate.env system property was: null 
+08:50:43.643 [main] DEBUG com.intuit.karate - request:
+1 > POST https://dev-core-service.innova.com/api/dlc-locations/available-models-by-makes-and-years
+1 > Content-Type: application/json; charset=UTF-8
+1 > Accept: application/json
+1 > api-key: EJPLzfSyCmdDSUzhG9LJwt3MCgTrAN
+1 > Content-Length: 46
+1 > Host: dev-core-service.innova.com
+1 > Connection: Keep-Alive
+1 > User-Agent: Apache-HttpClient/4.5.14 (Java/21.0.3)
+1 > Accept-Encoding: gzip,deflate
+{"Makes":["Ferrari"],"Years":[2021,2014,2001]}
+
+08:50:44.368 [main] DEBUG com.intuit.karate - response time in milliseconds: 725
+1 < 200
+1 < Transfer-Encoding: chunked
+1 < Content-Type: application/json; charset=utf-8
+1 < Server: Microsoft-IIS/10.0
+1 < X-Powered-By: ASP.NET
+1 < Date: Tue, 30 Sep 2025 08:50:43 GMT
+{"TraceId":"0f0824fa5954769595ec2cf10ea537f9","Ok":true,"Message":null,"Data":["FF","SF 90 stradale"]}
+
+]]></system-out>
+  </testcase>
+  <testcase name="[2:24] Check available models for makes Plymouth and Years: 2021, 2014, 2001" classname="resources/apis/dlc-locations/available-models-by-makes-and-years" time="0.795">
+    <system-out><![CDATA[08:50:44.379 [main] INFO  com.intuit.karate - karate.env system property was: null 
+08:50:44.383 [main] DEBUG com.intuit.karate - request:
+1 > POST https://dev-core-service.innova.com/api/dlc-locations/available-models-by-makes-and-years
+1 > Content-Type: application/json; charset=UTF-8
+1 > Accept: application/json
+1 > api-key: EJPLzfSyCmdDSUzhG9LJwt3MCgTrAN
+1 > Content-Length: 47
+1 > Host: dev-core-service.innova.com
+1 > Connection: Keep-Alive
+1 > User-Agent: Apache-HttpClient/4.5.14 (Java/21.0.3)
+1 > Accept-Encoding: gzip,deflate
+{"Makes":["Plymouth"],"Years":[2021,2014,2001]}
+
+08:50:45.115 [main] DEBUG com.intuit.karate - response time in milliseconds: 731
+1 < 200
+1 < Transfer-Encoding: chunked
+1 < Content-Type: application/json; charset=utf-8
+1 < Server: Microsoft-IIS/10.0
+1 < X-Powered-By: ASP.NET
+1 < Date: Tue, 30 Sep 2025 08:50:44 GMT
+{"TraceId":"af9d75dc004fed3d8427b32daa491847","Ok":true,"Message":null,"Data":["Neon","Prowler"]}
+
+---------------------------------------------------------
+feature: classpath:resources/apis/dlc-locations/available-models-by-makes-and-years.feature
+scenarios:  2 | passed:  2 | failed:  0 | time: 1.4725
+---------------------------------------------------------
+
+]]></system-out>
+  </testcase>
+  <testcase name="[1:9] Check dlc location info for Year: 2022, Make: Acura, Model: ILX" classname="resources/apis/dlc-locations/get-infos-by-year-make-model" time="1.002">
+    <system-out><![CDATA[08:50:45.183 [main] INFO  com.intuit.karate - karate.env system property was: null 
+08:50:45.185 [main] DEBUG com.intuit.karate - request:
+1 > POST https://dev-core-service.innova.com/api/dlc-locations/get-infos-by-year-make-model
+1 > Content-Type: application/json; charset=UTF-8
+1 > Accept: application/json
+1 > api-key: EJPLzfSyCmdDSUzhG9LJwt3MCgTrAN
+1 > Content-Length: 61
+1 > Host: dev-core-service.innova.com
+1 > Connection: Keep-Alive
+1 > User-Agent: Apache-HttpClient/4.5.14 (Java/21.0.3)
+1 > Accept-Encoding: gzip,deflate
+{"Language":"en-us","Year":2020,"Make":"Acura","Model":"ILX"}
+
+08:50:45.916 [main] DEBUG com.intuit.karate - response time in milliseconds: 729
+1 < 200
+1 < Transfer-Encoding: chunked
+1 < Content-Type: application/json; charset=utf-8
+1 < Server: Microsoft-IIS/10.0
+1 < X-Powered-By: ASP.NET
+1 < Date: Tue, 30 Sep 2025 08:50:45 GMT
+{"TraceId":"7668686926452e1cf7a50f3fc42e1362","Ok":true,"Message":null,"Data":[{"Year":"2020","Make":"Acura","Model":"ILX","LocationNumber":2,"Access":"uncovered ","Comments":"Driver Side - Under Lower Left Side of Dashboard","ImageFileName":"ilx-1","ImageFileUrl":"https://secure-downloads.innova.com/dlc-location-images-wm/acura/ilx/ilx-1.jpg?Expires=1759222545&Signature=LYAbvypmTpm~ker65wnJZIuD4RfM0RT0GlYUNd963~O9TRWWRxbHQkFxRnp~H2tWQFPtS812OJnatbUtc1qfhXJdRZAHn35~d25WRQxMMMhVw1ocZqgKdNqvq05rFFqdwWDVO5~oMh~w-ZTo14nnTX9xW~SmefiFvWud-rw~w0cFmmPXOFjJd3r-HCbOLNJf-HEs5HvSRv0wW~AbFXw7fn0bDAMh1FRPVXkdfMa3Xm3gsU2voYkRWbQhWw0GeOIxa9FfmKq7lMtHdP3MYvgFbWJNNMQEm6yTzX7RBFXBhB0ElCM-VloFI3QNmJosYA~UEuyZfMiRSCMzRo5btJnEXA__&Key-Pair-Id=APKAJVI4C2YLKAQ7KO6A","ImageFileUrlSmall":"https://secure-downloads.innova.com/dlc-location-images-wm/acura/ilx/ilx-1-sm.jpg?Expires=1759222545&Signature=QMmcgItNBIrmGx-xl-a-XQ6~bmW3xb3GIIrXY9G4B3bz6sLOYTmw5xLO80UFLsKhFKdT3mhu83I2Et3~gL1Ac7FDfkd3wpGt1oKPqCFgTrDbWlPH0md3l6T0gZdPeAqWp-PJi4GWXyurQeWzw6~I06s4-pfB9Hkcxzs0bRu5Y5po1~EBjfNQpxXb6qUz8e2tRfxIDMQeQCWGVR0gbBBc9wo2o9DpmGBAeg0G-SbQiSqGRG2q8EQLjfD-RDdf9e7yBmFCOLSucD53BlerynaUztLogDzJiHWQ0nB958W8MHBTQG7S9O2JTKLnnoP0c7Yj7D0UF7Howfo4IVvejyU0Pg__&Key-Pair-Id=APKAJVI4C2YLKAQ7KO6A"}]}
+
+---------------------------------------------------------
+feature: classpath:resources/apis/dlc-locations/get-infos-by-year-make-model.feature
+scenarios:  1 | passed:  1 | failed:  0 | time: 0.7365
+---------------------------------------------------------
+
+Karate version: 1.4.0
+======================================================
+elapsed:  20.08 | threads:    1 | thread time: 16.07 
+features:     5 | skipped:    0 | efficiency: 0.80
+scenarios:   17 | passed:    15 | failed: 2
+======================================================
+>>> failed features:
+match failed: EQUALS
+  $ | evaluated to 'false' (STRING:STRING)
+  'https://secure-downloads.innova.com/dlc-location-images-wm/?Expires=1759222535&Signature=AlYBSFeL~7lCiiWijjhwfw9rZKCHCde5-J3BxTDhdjozRCz3WtO4-KyEe9vHFGlRGepm2XdpIRRSWP8OS0NxPi6BmxCntKmDYfxMGLQckDA1XG8sjWo4LvVtOq18ND3WWDUhcJFDB461R6Bj3ijf9jldCf7ooFwN-cKLhc87J1DPG34KnJYSNYhlh-w-nLpy4FKo99GXlwYMKXReiYxVBeDAA6sP1ab5ImGN9VfYgFbzMbiIMxn8GtuZ5u97eqlz4t4DRsYpzmv3haGdyRe3GxGQWEci~cnhSQqkpuUTjNwmIAuFtQIptbw0sU1lnN2mzZHkXxp9xYl6gOFQrUfceQ__&Key-Pair-Id=APKAJVI4C2YLKAQ7KO6A'
+  '#? _ == null || _ == ""'
+
+classpath:resources/apis/dlc-locations/dlc-locations-by-vin.feature:46
+match failed: EQUALS
+  $ | evaluated to 'false' (STRING:STRING)
+  'https://secure-downloads.innova.com/dlc-location-images-wm/?Expires=1759222538&Signature=eWjBhqPmRiBPldqcNWMASYdaXE-HwxT2Nl~PHYTq4aywbNDBlRfLyMeelQfLG-gwbI-e6ZpXCKjURPloUgijNoIcInnBsHkc5o9GcJdPC2oI6WediAChu7bNPc7FlnRNhjbOR73Zsxuvdy2~VC6q2m9arnj7uJET4LNhAkgOXU0u-BxOthB8E926k21Wz6nLwLjx1OhRHr5d9Y2mrWJ5-A5FaqdbXXBqY2S7ftMvcfFFd9eK3vzda0HTNeQ6Fw1eJPNPNvUdHRPrk0W3YCLalZscv8dncu9t2kvABM8930oSItisdB~lHTRq5ATX3INeZnKS6IusZv6TvVBlFR8egg__&Key-Pair-Id=APKAJVI4C2YLKAQ7KO6A'
+  '#? _ == null || _ == ""'
+
+classpath:resources/apis/dlc-locations/dlc-locations-by-vin.feature:109
+<<<
+
+HTML report: (paste into browser to view) | Karate version: 1.4.0
+file:///app/target/karate-reports/karate-summary.html
+===================================================================
+
+]]></system-out>
+  </testcase>
+</testsuite>

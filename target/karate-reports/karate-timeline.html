@@ -1,0 +1,32 @@
+<!DOCTYPE HTML>
+<html lang="en">
+  <head>
+    <meta charset="utf-8"/>
+    <title>Karate Timeline</title>
+    <style>
+      body, html { font-family: arial, sans-serif; font-size: 11pt; }
+      #visualization { box-sizing: border-box; width: 100%; height: 300px; }
+      .vis-item.failed { background-color: #F2928C; }
+      .page-heading { padding: 0.5em; margin-bottom: 0.5em; background-color: lightcyan; border: 1px solid gray; }
+    </style>
+    <script src="res/vis.min.js"></script>
+    <link href="res/vis.min.css" rel="stylesheet" type="text/css" />
+  </head>
+  <body>
+    <div class="page-heading">
+      <a href="karate-summary.html">Summary</a>
+    </div>     
+    <div id="visualization"></div>
+    <script>
+var groups = [{"content":"main","id":1}];
+var items = [{"id":1,"group":1,"content":"resources\/apis\/dlc-locations\/available-makes-by-years[1:13]","start":1759222239438,"end":1759222240217,"title":"resources\/apis\/dlc-locations\/available-makes-by-years[1:13] 08:50:39.438-08:50:40.217 Check available makes for years 2009 and 2015"},{"id":2,"group":1,"content":"resources\/apis\/dlc-locations\/available-makes-by-years[2:24]","start":1759222240227,"end":1759222240987,"title":"resources\/apis\/dlc-locations\/available-makes-by-years[2:24] 08:50:40.227-08:50:40.987 Check available makes for year 1995"},{"id":3,"group":1,"content":"resources\/apis\/dlc-locations\/available-makes-by-years[3:35]","start":1759222240996,"end":1759222241789,"title":"resources\/apis\/dlc-locations\/available-makes-by-years[3:35] 08:50:40.996-08:50:41.789 Check available makes for year 2025"},{"id":4,"group":1,"content":"resources\/apis\/dlc-locations\/available-models-by-makes-and-years[1:12]","start":1759222243631,"end":1759222244369,"title":"resources\/apis\/dlc-locations\/available-models-by-makes-and-years[1:12] 08:50:43.631-08:50:44.369 Check available models for makes Ferrari and Years: 2021, 2014, 2001"},{"id":5,"group":1,"content":"resources\/apis\/dlc-locations\/available-models-by-makes-and-years[2:24]","start":1759222244379,"end":1759222245115,"title":"resources\/apis\/dlc-locations\/available-models-by-makes-and-years[2:24] 08:50:44.379-08:50:45.115 Check available models for makes Plymouth and Years: 2021, 2014, 2001"},{"id":6,"group":1,"content":"resources\/apis\/dlc-locations\/available-years-by-makes[1:12]","start":1759222241943,"end":1759222242699,"title":"resources\/apis\/dlc-locations\/available-years-by-makes[1:12] 08:50:41.943-08:50:42.699 Check available years for makes Sprinter and Ferrari"},{"id":7,"group":1,"content":"resources\/apis\/dlc-locations\/available-years-by-makes[2:23]","start":1759222242712,"end":1759222243555,"title":"resources\/apis\/dlc-locations\/available-years-by-makes[2:23] 08:50:42.712-08:50:43.555 Check available years for make Ford"},{"id":8,"group":1,"content":"resources\/apis\/dlc-locations\/dlc-locations-by-vin[1.1:26]","start":1759222228062,"end":1759222231629,"title":"resources\/apis\/dlc-locations\/dlc-locations-by-vin[1.1:26] 08:50:28.062-08:50:31.629 Invalid Language and VIN"},{"id":9,"group":1,"content":"resources\/apis\/dlc-locations\/dlc-locations-by-vin[1.2:26]","start":1759222231660,"end":1759222232437,"title":"resources\/apis\/dlc-locations\/dlc-locations-by-vin[1.2:26] 08:50:31.660-08:50:32.437 Invalid Language"},{"id":10,"group":1,"content":"resources\/apis\/dlc-locations\/dlc-locations-by-vin[1.3:26]","start":1759222232459,"end":1759222233310,"title":"resources\/apis\/dlc-locations\/dlc-locations-by-vin[1.3:26] 08:50:32.459-08:50:33.310 Invalid VIN"},{"id":11,"group":1,"content":"resources\/apis\/dlc-locations\/dlc-locations-by-vin[1.4:26]","start":1759222233329,"end":1759222234173,"title":"resources\/apis\/dlc-locations\/dlc-locations-by-vin[1.4:26] 08:50:33.329-08:50:34.173 Invalid VIN Format"},{"id":12,"group":1,"content":"resources\/apis\/dlc-locations\/dlc-locations-by-vin[1.5:26]","start":1759222234198,"end":1759222235037,"title":"resources\/apis\/dlc-locations\/dlc-locations-by-vin[1.5:26] 08:50:34.198-08:50:35.037 Invalid Api Key (Authentication Check)"},{"id":13,"group":1,"content":"resources\/apis\/dlc-locations\/dlc-locations-by-vin[2:28]","start":1759222235050,"end":1759222235933,"title":"resources\/apis\/dlc-locations\/dlc-locations-by-vin[2:28] 08:50:35.050-08:50:35.933 Verify DLC Location Info and verify ImageFileName is null by VIN: JM1DRACB*N1******","className":"failed"},{"id":14,"group":1,"content":"resources\/apis\/dlc-locations\/dlc-locations-by-vin[3:49]","start":1759222235964,"end":1759222236739,"title":"resources\/apis\/dlc-locations\/dlc-locations-by-vin[3:49] 08:50:35.964-08:50:36.739 Check DLC Location Info and Image URLs cannot null by VIN: 4T4BF1FK1FR513668"},{"id":15,"group":1,"content":"resources\/apis\/dlc-locations\/dlc-locations-by-vin[4:70]","start":1759222236755,"end":1759222237505,"title":"resources\/apis\/dlc-locations\/dlc-locations-by-vin[4:70] 08:50:36.755-08:50:37.505 Check DLC Location Info and Image URLs can not null by VIN: 2CNDL73F976028975"},{"id":16,"group":1,"content":"resources\/apis\/dlc-locations\/dlc-locations-by-vin[5:91]","start":1759222237525,"end":1759222238327,"title":"resources\/apis\/dlc-locations\/dlc-locations-by-vin[5:91] 08:50:37.525-08:50:38.327 Check DLC Location Info and Image URLs can not null with VIN: JM1DRACB*N1****** and es-mx Language","className":"failed"},{"id":17,"group":1,"content":"resources\/apis\/dlc-locations\/get-infos-by-year-make-model[1:9]","start":1759222245182,"end":1759222245919,"title":"resources\/apis\/dlc-locations\/get-infos-by-year-make-model[1:9] 08:50:45.182-08:50:45.919 Check dlc location info for Year: 2022, Make: Acura, Model: ILX"}];
+</script>
+    <script>
+      var container = document.getElementById('visualization');
+      var timeline = new vis.Timeline(container);
+      timeline.setOptions({groupOrder: 'content'});
+      timeline.setGroups(new vis.DataSet(groups));
+      timeline.setItems(new vis.DataSet(items));
+    </script>
+  </body>
+</html>
