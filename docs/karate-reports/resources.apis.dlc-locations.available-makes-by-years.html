@@ -21,7 +21,7 @@ posthog.init('phc_M6fKk3dSX9HjglkqPSybauGas45NINb7EgsPGU8N9g1',{
   capture_pageview:false,
   api_transport:'sendBeacon',
   loaded: function(posthog) { 
-    posthog.capture("report_feature",{distinct_id:"c6d5fc96-f60d-4e16-83c5-cdab4cdf1113",karate_version:"1.4.0",karate_meta:null});
+    posthog.capture("report_feature",{distinct_id:"c84836db-2e6e-4b52-9c61-ea4caf73d538",karate_version:"1.4.0",karate_meta:null});
   }
 });
 </script>
@@ -49,7 +49,7 @@ posthog.init('phc_M6fKk3dSX9HjglkqPSybauGas45NINb7EgsPGU8N9g1',{
     <div>Scenarios</div>
   </div>
   <div id="nav-date">
-    <div>2025-10-01 03:50:15 AM</div>
+    <div>2025-10-01 03:53:08 AM</div>
   </div>
 </div>
 
@@ -87,7 +87,7 @@ posthog.init('phc_M6fKk3dSX9HjglkqPSybauGas45NINb7EgsPGU8N9g1',{
               </div>
             </div>
             <div class="scenario-time passed">
-              <span>ms:</span>&nbsp;<span>110</span>
+              <span>ms:</span>&nbsp;<span>244</span>
             </div>
           </div>
           <div class="step-row">
@@ -119,7 +119,7 @@ posthog.init('phc_M6fKk3dSX9HjglkqPSybauGas45NINb7EgsPGU8N9g1',{
 
   
 
-  <div class="preformatted" data-parent="0.4">03:50:15.284 karate.env system property was: null 
+  <div class="preformatted" data-parent="0.4">03:53:08.184 karate.env system property was: null 
 </div>   
 
   
@@ -223,7 +223,7 @@ posthog.init('phc_M6fKk3dSX9HjglkqPSybauGas45NINb7EgsPGU8N9g1',{
         <span>*</span>&nbsp;<span>def makesData = read(&#39;classpath:resources/data/dlc-locations/available-makes-by-years.json&#39;)</span>
       </div>
     </div>
-    <div class="time-cell passed">3</div>
+    <div class="time-cell passed">2</div>
   </div>
 
    
@@ -279,7 +279,7 @@ posthog.init('phc_M6fKk3dSX9HjglkqPSybauGas45NINb7EgsPGU8N9g1',{
         <span>*</span>&nbsp;<span>def expectedMakes_1995 = makesData.expectedMakes_1995</span>
       </div>
     </div>
-    <div class="time-cell passed">2</div>
+    <div class="time-cell passed">3</div>
   </div>
 
    
@@ -365,7 +365,7 @@ posthog.init('phc_M6fKk3dSX9HjglkqPSybauGas45NINb7EgsPGU8N9g1',{
         <span>When</span>&nbsp;<span>method post</span>
       </div>
     </div>
-    <div class="time-cell passed">102</div>
+    <div class="time-cell passed">236</div>
   </div>
 
    
@@ -374,7 +374,7 @@ posthog.init('phc_M6fKk3dSX9HjglkqPSybauGas45NINb7EgsPGU8N9g1',{
 
   
 
-  <div class="preformatted" data-parent="0.20">03:50:15.294 request:
+  <div class="preformatted" data-parent="0.20">03:53:08.195 request:
 1 &gt; POST https://dev-core-service.innova.com/api/dlc-locations/available-makes-by-years
 1 &gt; Content-Type: application/json; charset=UTF-8
 1 &gt; Accept: application/json
@@ -386,14 +386,14 @@ posthog.init('phc_M6fKk3dSX9HjglkqPSybauGas45NINb7EgsPGU8N9g1',{
 1 &gt; Accept-Encoding: gzip,deflate
 {&quot;Years&quot;:[2009,2015]}
 
-03:50:15.393 response time in milliseconds: 98
+03:53:08.427 response time in milliseconds: 231
 1 &lt; 200
 1 &lt; Transfer-Encoding: chunked
 1 &lt; Content-Type: application/json; charset=utf-8
 1 &lt; Server: Microsoft-IIS/10.0
 1 &lt; X-Powered-By: ASP.NET
-1 &lt; Date: Wed, 01 Oct 2025 03:50:15 GMT
-{&quot;TraceId&quot;:&quot;b0cca8172bb957b51843c6e1b7e3ad3e&quot;,&quot;Ok&quot;:true,&quot;Message&quot;:null,&quot;Data&quot;:[&quot;Acura&quot;,&quot;Audi&quot;,&quot;BMW&quot;,&quot;Buick&quot;,&quot;Cadillac&quot;,&quot;Chevrolet&quot;,&quot;Chrysler&quot;,&quot;Dodge&quot;,&quot;Fiat&quot;,&quot;Ford&quot;,&quot;Freightliner&quot;,&quot;GMC&quot;,&quot;Honda&quot;,&quot;HUMMER&quot;,&quot;Hyundai&quot;,&quot;Infiniti&quot;,&quot;Jaguar&quot;,&quot;Jeep&quot;,&quot;Kia&quot;,&quot;Land Rover&quot;,&quot;Lexus&quot;,&quot;Lincoln&quot;,&quot;Lotus&quot;,&quot;Maserati&quot;,&quot;Maybach&quot;,&quot;Mazda&quot;,&quot;Mercedes-Benz&quot;,&quot;Mercury&quot;,&quot;MINI&quot;,&quot;Mitsubishi&quot;,&quot;Nissan&quot;,&quot;Pontiac&quot;,&quot;Porsche&quot;,&quot;Ram&quot;,&quot;Rolls-Royce&quot;,&quot;Saab&quot;,&quot;Saturn&quot;,&quot;Scion&quot;,&quot;Smart&quot;,&quot;Subaru&quot;,&quot;Suzuki&quot;,&quot;Tesla&quot;,&quot;Toyota&quot;,&quot;Volkswagen&quot;,&quot;Volvo&quot;]}
+1 &lt; Date: Wed, 01 Oct 2025 03:53:08 GMT
+{&quot;TraceId&quot;:&quot;40644e5b25d26504062796bf4b244efe&quot;,&quot;Ok&quot;:true,&quot;Message&quot;:null,&quot;Data&quot;:[&quot;Acura&quot;,&quot;Audi&quot;,&quot;BMW&quot;,&quot;Buick&quot;,&quot;Cadillac&quot;,&quot;Chevrolet&quot;,&quot;Chrysler&quot;,&quot;Dodge&quot;,&quot;Fiat&quot;,&quot;Ford&quot;,&quot;Freightliner&quot;,&quot;GMC&quot;,&quot;Honda&quot;,&quot;HUMMER&quot;,&quot;Hyundai&quot;,&quot;Infiniti&quot;,&quot;Jaguar&quot;,&quot;Jeep&quot;,&quot;Kia&quot;,&quot;Land Rover&quot;,&quot;Lexus&quot;,&quot;Lincoln&quot;,&quot;Lotus&quot;,&quot;Maserati&quot;,&quot;Maybach&quot;,&quot;Mazda&quot;,&quot;Mercedes-Benz&quot;,&quot;Mercury&quot;,&quot;MINI&quot;,&quot;Mitsubishi&quot;,&quot;Nissan&quot;,&quot;Pontiac&quot;,&quot;Porsche&quot;,&quot;Ram&quot;,&quot;Rolls-Royce&quot;,&quot;Saab&quot;,&quot;Saturn&quot;,&quot;Scion&quot;,&quot;Smart&quot;,&quot;Subaru&quot;,&quot;Suzuki&quot;,&quot;Tesla&quot;,&quot;Toyota&quot;,&quot;Volkswagen&quot;,&quot;Volvo&quot;]}
 
 </div>   
 
@@ -471,7 +471,7 @@ posthog.init('phc_M6fKk3dSX9HjglkqPSybauGas45NINb7EgsPGU8N9g1',{
               </div>
             </div>
             <div class="scenario-time passed">
-              <span>ms:</span>&nbsp;<span>102</span>
+              <span>ms:</span>&nbsp;<span>238</span>
             </div>
           </div>
           <div class="step-row">
@@ -503,7 +503,7 @@ posthog.init('phc_M6fKk3dSX9HjglkqPSybauGas45NINb7EgsPGU8N9g1',{
 
   
 
-  <div class="preformatted" data-parent="0.4">03:50:15.405 karate.env system property was: null 
+  <div class="preformatted" data-parent="0.4">03:53:08.438 karate.env system property was: null 
 </div>   
 
   
@@ -749,7 +749,7 @@ posthog.init('phc_M6fKk3dSX9HjglkqPSybauGas45NINb7EgsPGU8N9g1',{
         <span>When</span>&nbsp;<span>method post</span>
       </div>
     </div>
-    <div class="time-cell passed">100</div>
+    <div class="time-cell passed">236</div>
   </div>
 
    
@@ -758,7 +758,7 @@ posthog.init('phc_M6fKk3dSX9HjglkqPSybauGas45NINb7EgsPGU8N9g1',{
 
   
 
-  <div class="preformatted" data-parent="0.31">03:50:15.408 request:
+  <div class="preformatted" data-parent="0.31">03:53:08.442 request:
 1 &gt; POST https://dev-core-service.innova.com/api/dlc-locations/available-makes-by-years
 1 &gt; Content-Type: application/json; charset=UTF-8
 1 &gt; Accept: application/json
@@ -770,14 +770,14 @@ posthog.init('phc_M6fKk3dSX9HjglkqPSybauGas45NINb7EgsPGU8N9g1',{
 1 &gt; Accept-Encoding: gzip,deflate
 {&quot;Years&quot;:[1995]}
 
-03:50:15.507 response time in milliseconds: 98
+03:53:08.676 response time in milliseconds: 233
 1 &lt; 200
 1 &lt; Transfer-Encoding: chunked
 1 &lt; Content-Type: application/json; charset=utf-8
 1 &lt; Server: Microsoft-IIS/10.0
 1 &lt; X-Powered-By: ASP.NET
-1 &lt; Date: Wed, 01 Oct 2025 03:50:15 GMT
-{&quot;TraceId&quot;:&quot;61c4f4c319ff318da010c14127242dc4&quot;,&quot;Ok&quot;:true,&quot;Message&quot;:null,&quot;Data&quot;:[&quot;Ford&quot;,&quot;Jaguar&quot;]}
+1 &lt; Date: Wed, 01 Oct 2025 03:53:08 GMT
+{&quot;TraceId&quot;:&quot;b537bf016c0d36fcf0efc3cc993be9a0&quot;,&quot;Ok&quot;:true,&quot;Message&quot;:null,&quot;Data&quot;:[&quot;Ford&quot;,&quot;Jaguar&quot;]}
 
 </div>   
 
@@ -826,7 +826,7 @@ posthog.init('phc_M6fKk3dSX9HjglkqPSybauGas45NINb7EgsPGU8N9g1',{
         <span>And</span>&nbsp;<span>match response.Data == expectedMakes_1995</span>
       </div>
     </div>
-    <div class="time-cell passed">0</div>
+    <div class="time-cell passed">1</div>
   </div>
 
    
@@ -855,7 +855,7 @@ posthog.init('phc_M6fKk3dSX9HjglkqPSybauGas45NINb7EgsPGU8N9g1',{
               </div>
             </div>
             <div class="scenario-time passed">
-              <span>ms:</span>&nbsp;<span>100</span>
+              <span>ms:</span>&nbsp;<span>257</span>
             </div>
           </div>
           <div class="step-row">
@@ -887,7 +887,7 @@ posthog.init('phc_M6fKk3dSX9HjglkqPSybauGas45NINb7EgsPGU8N9g1',{
 
   
 
-  <div class="preformatted" data-parent="0.4">03:50:15.516 karate.env system property was: null 
+  <div class="preformatted" data-parent="0.4">03:53:08.689 karate.env system property was: null 
 </div>   
 
   
@@ -991,7 +991,7 @@ posthog.init('phc_M6fKk3dSX9HjglkqPSybauGas45NINb7EgsPGU8N9g1',{
         <span>*</span>&nbsp;<span>def makesData = read(&#39;classpath:resources/data/dlc-locations/available-makes-by-years.json&#39;)</span>
       </div>
     </div>
-    <div class="time-cell passed">0</div>
+    <div class="time-cell passed">1</div>
   </div>
 
    
@@ -1133,7 +1133,7 @@ posthog.init('phc_M6fKk3dSX9HjglkqPSybauGas45NINb7EgsPGU8N9g1',{
         <span>When</span>&nbsp;<span>method post</span>
       </div>
     </div>
-    <div class="time-cell passed">98</div>
+    <div class="time-cell passed">254</div>
   </div>
 
    
@@ -1142,7 +1142,7 @@ posthog.init('phc_M6fKk3dSX9HjglkqPSybauGas45NINb7EgsPGU8N9g1',{
 
   
 
-  <div class="preformatted" data-parent="0.42">03:50:15.520 request:
+  <div class="preformatted" data-parent="0.42">03:53:08.694 request:
 1 &gt; POST https://dev-core-service.innova.com/api/dlc-locations/available-makes-by-years
 1 &gt; Content-Type: application/json; charset=UTF-8
 1 &gt; Accept: application/json
@@ -1154,14 +1154,14 @@ posthog.init('phc_M6fKk3dSX9HjglkqPSybauGas45NINb7EgsPGU8N9g1',{
 1 &gt; Accept-Encoding: gzip,deflate
 {&quot;Years&quot;:[2025]}
 
-03:50:15.616 response time in milliseconds: 95
+03:53:08.945 response time in milliseconds: 251
 1 &lt; 200
 1 &lt; Transfer-Encoding: chunked
 1 &lt; Content-Type: application/json; charset=utf-8
 1 &lt; Server: Microsoft-IIS/10.0
 1 &lt; X-Powered-By: ASP.NET
-1 &lt; Date: Wed, 01 Oct 2025 03:50:15 GMT
-{&quot;TraceId&quot;:&quot;c1ba08d09851f2e6cfbab6446aff7ede&quot;,&quot;Ok&quot;:true,&quot;Message&quot;:null,&quot;Data&quot;:[]}
+1 &lt; Date: Wed, 01 Oct 2025 03:53:08 GMT
+{&quot;TraceId&quot;:&quot;0ba1f7a239f55553e3526179ee605c52&quot;,&quot;Ok&quot;:true,&quot;Message&quot;:null,&quot;Data&quot;:[]}
 
 </div>   
 
